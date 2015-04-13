@@ -1,6 +1,9 @@
 {
   "name": "newwind",
   "version": "0.0.0",
+  "engines": {
+    "node": "0.12.x"
+  },
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
