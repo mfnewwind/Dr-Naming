@@ -1,1 +1,1 @@
-web: exit
+web: node bin/www
