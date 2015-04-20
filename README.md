@@ -42,3 +42,10 @@ $ git clone git@github.com:mfnewwind/newwind.git
 $ npm install
 $ npm start
 ```
+
+## 更新
+`$ git pull` した際にうまく動作しない場合は、依存ライブラリを更新すると直る場合があります。
+
+```sh
+$ npm install
+```
