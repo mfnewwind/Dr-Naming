@@ -11,7 +11,9 @@
  - [Node.js](https://nodejs.org/) v0.12.x
     - Mac, *nix 環境では [nodebrew](https://github.com/hokaccha/nodebrew) や [nvm](https://github.com/creationix/nvm), [ndenv](https://github.com/riywo/ndenv) を使うと便利です。
     - Windows 環境では [nvmw](https://github.com/hakobera/nvmw) を使うか、[公式のインストーラー](https://nodejs.org/download/) を使ってください。
-
+ - [gulp](http://gulpjs.com/)
+    - フロントエンド & サーバーサイドの JS 製ビルドツール (Grunt の親戚)
+    - インストールは `npm install -g gulp`
 
 ## インストール
 
