@@ -30,3 +30,13 @@ $ npm install
 $ npm start
 ```
 
+
+## 依存ライブラリ
+
+ - [Vue.js](http://vuejs.org/)
+    - JS フロントエンド MVVM フレームワーク
+    - シンプル・軽量
+    - 参考サイト
+       - [Vue.js 公式リファレンス (英語)](http://vuejs.org/api/)
+       - [ライオンでも分かるVuejs](http://www.slideshare.net/lion-man/vuejs)
+       - [Vue.js資料まとめ](https://gist.github.com/hashrock/f575928d0e109ace9ad0)
