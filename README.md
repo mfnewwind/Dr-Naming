@@ -54,3 +54,21 @@ $ npm start
 ```sh
 $ npm install
 ```
+
+## 開発
+プロジェクトのディレクトリに移動して
+
+```sh
+$ npm install # 初回のみ
+$ npm run dev
+```
+
+これで`localhost:3000`から見れるようになります。
+JSとCSSは`src`内のファイルを変更すれば自動でコンパイルされます。
+
+### フロントエンドのファイル置き場
+
+- Image : `public/images/`
+- Javascript : `src/javascripts/`
+- Stylesheet : `src/stylesheets/`
+- HTML(jade) : `views/`

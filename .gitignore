@@ -5,3 +5,5 @@ node_modules
 
 public/javascripts
 public/stylesheets
+
+npm-debug.log
