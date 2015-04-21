@@ -51,10 +51,8 @@ gulp.task('js-build', function () {
   return b.bundle()
     .pipe(source('bundle.js'))
     .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
       .pipe(uglify())
       .on('error', gutil.log)
-    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./public/javascripts'));
 });
 
