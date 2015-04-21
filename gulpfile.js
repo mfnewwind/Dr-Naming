@@ -16,7 +16,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var minifyCSS = require('gulp-minify-css');
 var concat = require('gulp-concat');
 
-var server = require('gulp-express');
+var gls = require('gulp-live-server');
 
 // Javascript
 
@@ -65,12 +65,13 @@ gulp.task('css', function () {
 
 gulp.task('server', function () {
 
-    var options = process.env;
-    options.NODE_ENV = process.env.NODE_ENV || 'development';
+    var env = process.env;
+    env.NODE_ENV = process.env.NODE_ENV || 'development';
 
-    server.run(['bin/www'], options, false);
+    var server = gls('bin/www', env, false);
+    server.start();
 
-    gulp.watch(['app.js', 'bin/www', 'routes/**/*.js'], [server.run]);
+    gulp.watch(['app.js', 'bin/www', 'routes/**/*.js'], [server.start]);
 });
 
 
