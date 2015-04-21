@@ -7,7 +7,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "mocha --compilers coffee:coffee-script/register --colors --growl --bail --check-leaks test"
+    "test": "mocha --compilers coffee:coffee-script/register --colors --growl --bail --check-leaks test",
+    "dev": "gulp"
   },
   "dependencies": {
     "body-parser": "~1.12.0",
@@ -23,11 +24,15 @@
   },
   "devDependencies": {
     "browserify": "^9.0.8",
+    "connect-livereload": "^0.5.3",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.1.0",
     "gulp-concat": "^2.5.2",
+    "gulp-express": "^0.3.5",
     "gulp-less": "^3.0.2",
     "gulp-minify-css": "^1.0.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.0",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-util": "^3.0.4",
     "less-plugin-autoprefix": "^1.4.1",
