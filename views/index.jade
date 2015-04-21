@@ -3,14 +3,34 @@ extends layout
 block content
   header
     div.site-wrapper.h-box
-      div.title
-        h1 Doctor NaminG
-        img.logo(src='/images/header_logo.png')
+      a.wrapper(href='')
+        div.title
+          h1 Doctor NaminG
+          img.logo(src='/images/header_logo.png')
       a.btn.github(href='') Github
       div.avatar
         img.face(src='/images/avatar_dummy.png')
         span.name Kazuki Matsushita
         span.repo Repositories 70
+      nav
+        ul.smart-list
+          a.wrapper(href='')
+            li
+              i.fa.fa-user.icon
+              span Profile
+          a.wrapper(href='')
+            li
+              i.fa.fa-github-square.icon
+              span Repositories
+          a.wrapper(href='')
+            li
+              i.fa.fa-cog.icon
+              span Settings
+          a.wrapper(href='')
+            li
+              i.fa.fa-sign-out.icon
+              span Sign Out
+        div.projection
   div#DNG
   footer
   script(type='text/javascript' src='javascripts/bundle.js')

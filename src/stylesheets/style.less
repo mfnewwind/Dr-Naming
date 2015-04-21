@@ -1,13 +1,16 @@
 
 // colors
 
-@color-header-bg: #00887A;
-@color-page-head-bg: #4CB5AB;
-@color-page-bg: #EDEDED;
-@color-line-inside: #EDEDED;
+@color-bg-green: #00887A;
+@color-bg-lightgreen: #4CB5AB;
+@color-bg-gray: #EDEDED;
+@color-bg-white: #FFFFFF;
 @color-text-green: #4CB5AB;
-@color-btn-green: #4CB5AB;
+@color-text-light: #606060;
 @color-text-gray: #EDF2F5;
+@color-line-dark: #DFDFDF;
+@color-line-light: #EDEDED;
+@color-btn-green: #4CB5AB;
 
 @size-site-width: 960px;
 
@@ -22,14 +25,19 @@ html, body {
 }
 
 body {
-  background-color: @color-page-bg;
+  background-color: @color-bg-gray;
 }
 
 a {
   text-decoration: none;
 }
 
+a.wrapper {
+  display: block;
+}
+
 .site-wrapper {
+  position: relative;
   margin: 0 auto;
   width: @size-site-width;
 }
@@ -40,4 +48,12 @@ a {
 
 .btn {
   border-radius: 2px;
+}
+
+.smart-list {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
 }
