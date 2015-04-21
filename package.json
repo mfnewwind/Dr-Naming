@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "mocha --colors --growl --bail --check-leaks test",
+    "test": "mocha --colors --growl --bail --check-leaks test/**/*.js",
     "dev": "node_modules/.bin/gulp"
   },
   "dependencies": {
@@ -27,12 +27,14 @@
   },
   "devDependencies": {
     "browserify": "^9.0.8",
+    "chai": "^2.2.0",
     "connect-livereload": "^0.5.3",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.1.0",
     "gulp-concat": "^2.5.2",
     "gulp-express": "^0.3.5",
     "gulp-less": "^3.0.2",
+    "gulp-live-server": "0.0.14",
     "gulp-minify-css": "^1.0.0",
     "gulp-notify": "^2.2.0",
     "gulp-sourcemaps": "^1.5.2",
