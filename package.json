@@ -17,6 +17,7 @@
     "debug": "~2.1.1",
     "express": "~4.12.2",
     "jade": "~1.9.2",
+    "js-parser": "git://github.com/mfnewwind/js-parser.git",
     "lodash": "^3.7.0",
     "mocha": "^2.2.4",
     "morgan": "~1.5.1",
