@@ -6,6 +6,7 @@ var gulp = require('gulp');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var gutil = require('gulp-util');
+var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var assign = require('lodash.assign');
 
@@ -29,6 +30,7 @@ var opts = assign({}, watchify.args, customOpts);
 var b = watchify(browserify(opts));
 
 gulp.task('js', bundle);
+
 b.on('update', bundle);
 b.on('log', gutil.log);
 
@@ -41,6 +43,20 @@ function bundle() {
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./public/javascripts'));
 }
+
+gulp.task('js-build', function () {
+
+  var b = browserify(customOpts);
+
+  return b.bundle()
+    .pipe(source('bundle.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+      .pipe(uglify())
+      .on('error', gutil.log)
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('./public/javascripts'));
+});
 
 
 // Stylesheet
@@ -80,3 +96,5 @@ gulp.task('server', function () {
 gulp.task('default', ['js', 'css', 'server'], function() {
   gulp.watch('./src/stylesheets/**/*.less', ['css']);
 });
+
+gulp.task('build', ['js-build', 'css']);
