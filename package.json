@@ -6,6 +6,7 @@
   },
   "private": true,
   "scripts": {
+    "postinstall": "gulp build",
     "start": "node ./bin/www",
     "test": "mocha --colors --growl --bail --check-leaks test/**/*-test.js",
     "dev": "node_modules/.bin/gulp"
@@ -22,6 +23,7 @@
     "morgan": "~1.5.1",
     "serve-favicon": "~2.2.0",
     "superagent": "^1.2.0",
+    "gulp": "^3.8.11",
     "vue": "^0.11.6"
   },
   "devDependencies": {
@@ -37,6 +39,7 @@
     "gulp-minify-css": "^1.0.0",
     "gulp-notify": "^2.2.0",
     "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.4",
     "less-plugin-autoprefix": "^1.4.1",
     "lodash.assign": "^3.1.0",
