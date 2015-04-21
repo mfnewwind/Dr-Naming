@@ -5,8 +5,10 @@
 @color-bg-lightgreen: #4CB5AB;
 @color-bg-gray: #EDEDED;
 @color-bg-white: #FFFFFF;
+@color-bg-darkgray: #414141;
 @color-text-green: #4CB5AB;
 @color-text-light: #606060;
+@color-text-lightgray: #DFDFDF;
 @color-text-gray: #EDF2F5;
 @color-line-dark: #DFDFDF;
 @color-line-light: #EDEDED;
@@ -21,6 +23,8 @@
 html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
   font-family: 'メイリオ', Meiryo, 'Lucida Grande', Verdana, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'ＭＳ Ｐゴシック', sans-serif;
 }
 
@@ -36,7 +40,12 @@ a.wrapper {
   display: block;
 }
 
-.site-wrapper {
+.contents {
+  position: relative;
+  min-height: 100%;
+}
+
+.site-container {
   position: relative;
   margin: 0 auto;
   width: @size-site-width;

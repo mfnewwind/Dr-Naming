@@ -2,7 +2,7 @@ extends layout
 
 block content
   header
-    div.site-wrapper.h-box
+    div.site-container.h-box
       a.wrapper(href='')
         div.title
           h1 Doctor NaminG
@@ -31,6 +31,21 @@ block content
               i.fa.fa-sign-out.icon
               span Sign Out
         div.projection
-  div#DNG
+  section.app-wrapper
+    div.site-container#DNG
+      h2 Select repositories
+      div.app-container
   footer
+    div.site-container.h-box
+      a.wrapper(href='' target='_blank')
+        img.logo(src='/images/footer_logo_dummy.png')
+      a.wrapper(href='')
+        span.sitemap トップ
+      a.wrapper(href='')
+        span.sitemap 概要
+      a.wrapper(href='')
+        span.sitemap 利用規約
+      p.wrapper
+        small &copy; 2015 Mobile Factory All Rights Reserved.
+      
   script(type='text/javascript' src='javascripts/bundle.js')
