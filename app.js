@@ -46,6 +46,10 @@ if (app.get('env') === 'development') {
   });
 }
 
+if (app.get('env') === 'development') {
+  app.use(require('connect-livereload')());
+}
+
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {

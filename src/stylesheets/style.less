@@ -1,0 +1,59 @@
+
+// colors
+
+@color-bg-green: #00887A;
+@color-bg-lightgreen: #4CB5AB;
+@color-bg-gray: #EDEDED;
+@color-bg-white: #FFFFFF;
+@color-text-green: #4CB5AB;
+@color-text-light: #606060;
+@color-text-gray: #EDF2F5;
+@color-line-dark: #DFDFDF;
+@color-line-light: #EDEDED;
+@color-btn-green: #4CB5AB;
+
+@size-site-width: 960px;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'メイリオ', Meiryo, 'Lucida Grande', Verdana, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+body {
+  background-color: @color-bg-gray;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.wrapper {
+  display: block;
+}
+
+.site-wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: @size-site-width;
+}
+
+.h-box {
+  display: flex;
+}
+
+.btn {
+  border-radius: 2px;
+}
+
+.smart-list {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
