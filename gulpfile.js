@@ -47,9 +47,9 @@ function bundle() {
 
 gulp.task('css', function () {
   return gulp.src('./src/stylesheets/**/*.less')
-    .on('error', notify.onError('<%= error.message %>'))
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(less())
+    .on('error', notify.onError('<%= error.message %>'))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
