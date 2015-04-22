@@ -8,7 +8,7 @@ var buffer = require('vinyl-buffer');
 var gutil = require('gulp-util');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
-var assign = require('lodash.assign');
+var assign = require('lodash').assign;
 
 var notify = require('gulp-notify');
 
