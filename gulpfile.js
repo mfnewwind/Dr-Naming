@@ -49,6 +49,7 @@ gulp.task('js-build', function () {
   var b = browserify(customOpts);
 
   return b.bundle()
+    .on('error', notify.onError('<%= error.message %>'))
     .pipe(source('bundle.js'))
     .pipe(buffer())
       .pipe(uglify())
