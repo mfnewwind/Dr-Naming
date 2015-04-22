@@ -58,7 +58,19 @@ describe('Unit test for lib/parser.js', function () {
       parser.parseFile(EXAMPLE_PL, 'pl', function (err, results) {
         try {
           expect(err).to.be.null;
+          
           console.log(results);
+          
+          var var_message = _.find(results, function (x) { return x.name.indexOf('message') > -1; });
+          var func_testFunc = _.find(results, function (x) { return x.name === 'testFunc'; });
+          
+          expect(var_message).to.deep.equal({
+            type: 'variable',
+            name: '$message',
+            class_name: '',
+            line: 7,
+            comment: ''
+          });
         }
         
         catch (e) {
