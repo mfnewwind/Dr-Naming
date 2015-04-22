@@ -4,11 +4,16 @@
  * Module dependencies.
  */
 
-require('coffee-script/register');
-
 var app = require('../app');
 var debug = require('debug')('newwind:server');
 var http = require('http');
+
+
+/**
+ * database
+ */
+
+var database = require('../config/database');
 
 /**
  * Get port from environment and store in Express.
