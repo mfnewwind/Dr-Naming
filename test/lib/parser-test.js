@@ -54,14 +54,33 @@ describe('Unit test for lib/parser.js', function () {
     
     // ------------------------------------------------------------------------
     
-    it('should parse a Perl file (WIP)', function (done) {
+    it('should parse a Perl file', function (done) {
       parser.parseFile(EXAMPLE_PL, 'pl', function (err, results) {
         try {
           expect(err).to.be.null;
-          console.log(results);
+          expect(results).to.be.an('array');
+          
+          var var_message = _.find(results, function (x) { return x.name.indexOf('message') > -1; });
+          var func_testFunc = _.find(results, function (x) { return x.name === 'testFunc'; });
+          
+          expect(var_message).to.deep.equal({
+            type: 'variable',
+            name: '$message',
+            class_name: '',
+            line: 7,
+            comment: ''
+          });
+          
+          expect(func_testFunc).to.be.a('object');
+          expect(func_testFunc.type).to.equal('function');
+          expect(func_testFunc.name).to.equal('testFunc');
+          expect(func_testFunc.class_name).to.equal('');
+          expect(func_testFunc.line).to.equal(10);
+          expect(func_testFunc.comment).to.equal('');
         }
         
         catch (e) {
+          console.error(results);
           err = e;
         }
         
