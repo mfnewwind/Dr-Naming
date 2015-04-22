@@ -54,7 +54,7 @@ describe('Unit test for lib/parser.js', function () {
     
     // ------------------------------------------------------------------------
     
-    it('should parse a Perl file (WIP)', function (done) {
+    it('should parse a Perl file', function (done) {
       parser.parseFile(EXAMPLE_PL, 'pl', function (err, results) {
         try {
           expect(err).to.be.null;
