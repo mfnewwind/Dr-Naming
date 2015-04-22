@@ -12,6 +12,7 @@ var expect = require('chai').expect;
 var parser = require('../../lib/parser');
 
 var EXAMPLE_JS = Path.resolve(__dirname, '../files/example.js');
+var EXAMPLE_PL = Path.resolve(__dirname, '../files/example.pl');
 
 
 describe('Unit test for lib/parser.js', function () {
@@ -47,6 +48,25 @@ describe('Unit test for lib/parser.js', function () {
         catch (e) {
           console.log(results);
           done(e);
+        }
+      });
+    });
+    
+    // ------------------------------------------------------------------------
+    
+    it('should parse a Perl file (WIP)', function (done) {
+      parser.parseFile(EXAMPLE_PL, 'pl', function (err, results) {
+        try {
+          expect(err).to.be.null;
+          console.log(results);
+        }
+        
+        catch (e) {
+          err = e;
+        }
+        
+        finally {
+          done(err);
         }
       });
     });
