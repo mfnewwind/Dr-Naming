@@ -5,7 +5,7 @@ machine:
 
 dependencies:
   pre:
-    - git update submodule --init
+    - git submodule update --init
 
 deployment:
   staging:
