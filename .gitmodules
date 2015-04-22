@@ -1,3 +1,6 @@
 [submodule "perl-parser"]
 	path = perl-parser
 	url = https://github.com/mfnewwind/perl-parser.git
+[submodule "java-parser"]
+	path = java-parser
+	url = git@github.com:mfnewwind/java-parser.git
