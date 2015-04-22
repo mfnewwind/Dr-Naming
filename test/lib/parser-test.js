@@ -95,6 +95,8 @@ describe('Unit test for lib/parser.js', function () {
     
     it('should parse a Java file', function (done) {
       parser.parseFile(EXAMPLE_JAVA, 'java', function (err, results) {
+        console.log(err, results);
+        
         try {
           expect(err).to.be.null;
           expect(results).to.be.an('array');
@@ -129,6 +131,7 @@ describe('Unit test for lib/parser.js', function () {
         }
         
         catch (e) {
+          console.log(results);
           err = e;
         }
         
