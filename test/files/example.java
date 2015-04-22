@@ -9,4 +9,4 @@ class Example {
   public static void testFunc() {
     System.out.println("testFunc called!");
   }
-};
+}
