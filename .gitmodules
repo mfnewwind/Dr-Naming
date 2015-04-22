@@ -3,4 +3,4 @@
 	url = https://github.com/mfnewwind/perl-parser.git
 [submodule "java-parser"]
 	path = java-parser
-	url = git@github.com:mfnewwind/java-parser.git
+	url = https://github.com/mfnewwind/java-parser.git
