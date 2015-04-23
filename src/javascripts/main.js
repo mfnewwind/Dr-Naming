@@ -8,7 +8,9 @@ window.doctorNaminG = new Vue({
   },
   data: {
     title: 'DoctorNaminG',
-    avatar: {}
+    avatar: {
+      github: {},
+    }
   },
   methods: {},
   ready: function() {
