@@ -170,13 +170,13 @@ describe('Unit test for lib/parser.js', function () {
       var q = parser.getFileQueue();
       var enqueueFile = sandbox.stub(q, 'enqueue');
       
-      parser.enqueueFile({ path: 'example.js' });
+      parser.enqueueFile({ local_path: 'example.js' });
       expect(enqueueFile).to.have.been.calledOnce;
     });
     
     it('should parse a JavaScript file', function (done) {
       var q = parser.getFileQueue();
-      var file = { path: EXAMPLE_JS, lang: 'js' };
+      var file = { local_path: EXAMPLE_JS, lang: 'js' };
       q.clear();
       
       parser.enqueueFile(file);
@@ -184,7 +184,7 @@ describe('Unit test for lib/parser.js', function () {
       q.on('parsed', function (err, file, results) {
         try {
           expect(err).to.be.null;
-          expect(file).to.have.property('path').that.equal(file.path);
+          expect(file).to.have.property('local_path').that.equal(file.local_path);
           expect(results).to.be.an('array');
         }
         
