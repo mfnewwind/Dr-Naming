@@ -7,7 +7,8 @@ var fileSchema = new mongoose.Schema({
   file_name: String,
   path: String,
   url: String,
-  results: []
+  status: String,
+  result: []
 });
  
 var branchSchema = new mongoose.Schema({

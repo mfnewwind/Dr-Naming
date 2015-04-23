@@ -2,14 +2,21 @@
 
 /*jslint node: true */
 /*jslint -W030 */
-/*globals describe, it */
+/*globals describe, it, beforeEach, afterEach */
 
 var Path = require('path');
 
 var _ = require('lodash');
-var expect = require('chai').expect;
+var chai = require('chai');
+var sinon = require('sinon');
+var sinonChai = require('sinon-chai');
 
 var parser = require('../../lib/parser');
+var FileQueue = require('../../lib/file-queue');
+
+var expect = chai.expect;
+chai.use(sinonChai);
+
 
 var EXAMPLE_JS = Path.resolve(__dirname, '../files/example.js');
 var EXAMPLE_PL = Path.resolve(__dirname, '../files/example.pl');
@@ -17,7 +24,17 @@ var EXAMPLE_JAVA = Path.resolve(__dirname, '../files/example.java');
 
 
 describe('Unit test for lib/parser.js', function () {
-  describe('parseFile', function () {
+  var sandbox;
+  
+  beforeEach(function () {
+    sandbox = sinon.sandbox.create();
+  });
+  
+  afterEach(function () {
+    sandbox.restore();
+  });
+  
+  describe('parseFile()', function () {
     it('should parse a JavaScript file', function (done) {
       parser.parseFile(EXAMPLE_JS, 'js', function (err, results) {
         try {
@@ -136,6 +153,43 @@ describe('Unit test for lib/parser.js', function () {
         finally {
           done(err);
         }
+      });
+    });
+  });
+  
+  // ==========================================================================
+  
+  describe('getFileQueue()', function () {
+    it('should return a queue that is instance of FileQueue', function () {
+      expect(parser.getFileQueue()).to.be.instanceof(FileQueue);
+    });
+  });
+  
+  describe('enqueueFile()', function () {
+    it('should not throw any errors', function () {
+      var q = parser.getFileQueue();
+      var enqueueFile = sandbox.stub(q, 'enqueue');
+      
+      parser.enqueueFile({ path: 'example.js' });
+      expect(enqueueFile).to.have.been.calledOnce;
+    });
+    
+    it('should parse a JavaScript file', function (done) {
+      var q = parser.getFileQueue();
+      var file = { path: EXAMPLE_JS, lang: 'js' };
+      q.clear();
+      
+      parser.enqueueFile(file);
+      
+      q.on('parsed', function (err, file, results) {
+        try {
+          expect(err).to.be.null;
+          expect(file).to.have.property('path').that.equal(file.path);
+          expect(results).to.be.an('array');
+        }
+        
+        catch (e) { err = e; }
+        finally { done(err); }
       });
     });
   });
