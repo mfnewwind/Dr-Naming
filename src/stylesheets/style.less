@@ -1,3 +1,4 @@
+@size-site-width: 960px;
 
 // colors
 @color-blue-light-600: #039BE5;
@@ -24,6 +25,64 @@
   font-size: 26px;
   font-weight: lighter;
 }
+
+// table系共通
+.table-item {
+  min-width: 20px;
+  height: 40px;
+  padding-right: 10px;
+  overflow: hidden;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  font-size: 14px;
+  line-height: 40px;
+}
+.table-item.highlight {
+  color: @color-blue-light-600;
+}
+.table-item.number {
+  width: 40px;
+  color: @color-gray-500;
+  text-align: right;
+}
+.table-line {
+  border-bottom: 1px solid @color-gray-200;
+}
+.table-line-title {
+  color: @color-gray-500;
+  border-bottom: 3px solid @color-gray-200;
+}
+.table-line-selected {
+  background: @color-blue-light-600;
+  span {
+    color: @color-white;
+  }
+}
+
+// width
+.width20 {
+  width: 20px;
+}
+.width40 {
+  width: 40px;
+}
+.width60 {
+  width: 60px;
+}
+.width80 {
+  width: 80px;
+}
+.width140 {
+  width: 140px;
+}
+.width180 {
+  width: 180px;
+}
+.width280 {
+  width: 280px;
+}
+
 
 // colors(old)
 
