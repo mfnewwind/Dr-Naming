@@ -3,10 +3,11 @@ extends layout
 block content
   section
     div.top-contents
-      h1 Doctor Naming
-      //- img.background(src='/images/login_background_title.jpg')
-      img.logo(src='/images/login_logo_title.png')
-      p.description This is a very fun srvice<br>for programmers.
+      div.contents
+        h1 Doctor Naming
+        //- img.background(src='/images/login_background_title.jpg')
+        img.logo(src='/images/login_logo_title.png')
+        p.description This is a very fun srvice<br>for programmers.
     div.center-contents
       div.contents
         p.site-description Dr.NaminGはエンジニアのために、<br>GitHubと連携して "無駄をなくす"<br>開発支援サービスです。
@@ -16,16 +17,17 @@ block content
         div.doctor-naming-detail
           a.btn.text(href='') Dr.NaminGについて詳しく知る
     div.bottom-contents
-      div.support-contents
-        p.title Support
-        img.logo(src='/images/login_logo_github.png')
-        img.logo(src='/images/login_logo_perl.png')
-        img.logo(src='/images/login_logo_java.png')
-        img.logo(src='/images/login_logo_js.png')
-        img.logo(src='/images/login_logo_css.png')
-      div.share-contents
-        p.title Share
-        a.btn.twitter-follow(href='') Follow @dr_naming
-        a.btn.facebook-good(href='') いいね！
-        a.btn.facebook-share(href='') シェア
-        p.facebook-description 1,551,222人が「いいね！」と言っています。「いいね！」をくりっくして、友達に知らせましょう。
+      div.contents
+        div.support-contents
+          p.title Support
+          img.logo(src='/images/login_logo_github.png')
+          img.logo(src='/images/login_logo_perl.png')
+          img.logo(src='/images/login_logo_java.png')
+          img.logo(src='/images/login_logo_js.png')
+          img.logo(src='/images/login_logo_css.png')
+        div.share-contents
+          p.title Share
+          a.btn.twitter-follow(href='') Follow @dr_naming
+          a.btn.facebook-good(href='') いいね！
+          a.btn.facebook-share(href='') シェア
+          p.facebook-description 1,551,222人が「いいね！」と言っています。「いいね！」をくりっくして、友達に知らせましょう。

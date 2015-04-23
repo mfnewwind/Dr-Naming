@@ -8,28 +8,25 @@ section {
     background-image: url(../images/login_background_title.jpg);
     background-position:center top;
     background-repeat:no-repeat;
-    -moz-background-size:cover;
     background-size:cover;
+    text-align: center;
 
-    h1 {
-      display: none
-    }
-    .logo {
-      position: absolute;
-      display: block;
-      width: 50%;
-      top: 25%;
-      left: 25%;
-    }
-
-    .description {
-      position: absolute;
-      display: block;
-      width: 100%;
-      top: 60%;
-      color: @color-gray-500;
-      font-size: 20px;
+    .contents {
       text-align: center;
+
+      h1 {
+        display: none
+      }
+
+      .logo {
+        margin-top: 40px;
+      }
+
+      .description {
+        margin-top: 40px;
+        color: @color-gray-500;
+        font-size: 20px;
+      }
     }
   }
 
@@ -106,7 +103,12 @@ section {
     position: relative;
     height: 300px;
 
-    .support-contents {
+    .contents {
+      position: relative;
+      width: @size-site-width;
+      margin: 0 auto;
+
+      .support-contents {
       text-align: center;
 
       .title {
@@ -126,6 +128,7 @@ section {
         margin: 0;
         font-size: 28px;
       }
+    }
     }
   }
 }
