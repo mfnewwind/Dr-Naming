@@ -1,4 +1,6 @@
-header(v-component='header')
+header(v-component='header' v-with='avatar')
+  
+script#header_component(type='x-template')
   div.site-container.h-box
     a.wrapper(href='')
       div.title
@@ -6,9 +8,9 @@ header(v-component='header')
         img.logo(src='/images/header_logo.png')
     a.btn.github(href='/auth/github') Github
     div.avatar
-      img.face(src='/images/avatar_dummy.png')
-      span.name Kazuki Matsushita
-      span.repo Repositories 70
+      img.face(src='{{avatar_url}}')
+      span.name {{name}}
+      span.repo Repositories {{public_repos}}
     nav
       ul.smart-list
         a.wrapper(href='')
