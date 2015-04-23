@@ -5,9 +5,11 @@
 /*globals describe, it, before */
 
 var Path = require('path');
+var expect = require('chai').expect;
 
 var Repo = require('../../../models/repo');
 var save = require('../../../lib/parser-result/saver');
+
 
 var EXAMPLE_JS = Path.resolve(__dirname, '../../files/example.js');
 
@@ -32,8 +34,13 @@ describe('Unit test for lib/parser-result/saver.js', function () {
     
     it('should save result', function (done) {
       save(null, file, [], function (err, repo, branch, newFile) {
-        console.log(err, repo, branch, newFile);
-        done();
+        try {
+          expect(err).to.be.null;
+          expect(newFile.result).to.be.an('array');
+        }
+        
+        catch (e) { err = e; }
+        finally { done(err); }
       });
     });
   });
