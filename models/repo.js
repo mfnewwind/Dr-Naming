@@ -1,3 +1,4 @@
+'use strict';
 /*jslint node: true */
 
 var mongoose = require('mongoose');
