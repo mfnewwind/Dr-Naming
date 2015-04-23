@@ -1,3 +1,7 @@
+checkout:
+  post:
+    - git submodule update --init
+
 machine:
   #timezone: Asia/Tokyo
   node:
@@ -5,10 +9,6 @@ machine:
   post:
     - perl --version
     - java -version
-
-dependencies:
-  pre:
-    - git submodule update --init
 
 deployment:
   staging:
