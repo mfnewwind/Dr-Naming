@@ -19,13 +19,13 @@ router.get('/logout', function(req, res){
 });
 
 // 紹介ページ
-router.get('/about', function(req, res){
-  res.render('about', {});
+router.get('/introduction', function(req, res){
+  res.render('introduction', {});
 });
 
 // リポジトリ選択
-router.get('/select', function(req, res){
-  res.render('select', {});
+router.get('/select_repo', function(req, res){
+  res.render('select_repo', {});
 });
 
 // リポジトリ一覧
