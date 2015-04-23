@@ -7,6 +7,7 @@ var fileSchema = new mongoose.Schema({
   file_name: String,
   path: String,
   url: String,
+  status: String,
   result: []
 });
  
