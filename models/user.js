@@ -7,7 +7,7 @@ var repoSchema = new mongoose.Schema({
 });
 
 var userSchema = new mongoose.Schema({
-  github_name: String,
+  github_id: String,
   orgs: [], //organizations
   repos: [ repoSchema ],
   created_at: {
