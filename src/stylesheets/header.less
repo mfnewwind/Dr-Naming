@@ -40,6 +40,9 @@ header {
     margin: 7px 0 0 30px;
     color: @color-text-gray;
     text-align: right;
+    &:hover nav {
+      display: block;
+    }
     .name {
       display: block;
       margin: 4px 65px 0 0;
@@ -65,13 +68,15 @@ header {
     top: 60px;
     right: 0;
     width: 150px;
+    text-align: left;
+    z-index: 100;
     .projection {
       position: absolute;
       width: 100%;
       height: 8px;
       top: -8px;
       right: 0;
-      background-color: @color-bg-green;
+      background-color: @color-blue-light-600;
       &:before {
         content: "";
         position: absolute;
@@ -113,4 +118,3 @@ header {
   background: @color-blue-light-300;
   height: 100px;
 }
-

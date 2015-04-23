@@ -8,26 +8,18 @@ script#header_component(type='x-template')
         h1 Doctor NaminG
         img.logo(src='/images/header_logo.png')
     a.btn.github(href='/auth/github') Github
-    div.avatar
-      img.face(src='{{avatar_url}}')
-      span.name {{name}}
-      span.repo Repositories {{public_repos}}
-    nav
-      ul.smart-list
-        a.wrapper(href='')
-          li
-            i.fa.fa-user.icon
-            span Profile
-        a.wrapper(href='')
-          li
-            i.fa.fa-github-square.icon
-            span Repositories
-        a.wrapper(href='')
-          li
-            i.fa.fa-cog.icon
-            span Settings
-        a.wrapper(href='')
-          li
-            i.fa.fa-sign-out.icon
-            span Sign Out
-      div.projection
+    div.avatar(v-show='github')
+      img.face.hide(src='{{github.avatar_url}}')
+      span.name {{github.name}}
+      span.repo Repositories {{github.public_repos}}
+      nav
+        ul.smart-list
+          a.wrapper(href='/repo/{{github.login}}')
+            li
+              i.fa.fa-github-square.icon
+              span Repositories
+          a.wrapper(href='/logout')
+            li
+              i.fa.fa-sign-out.icon
+              span Sign Out
+        div.projection
