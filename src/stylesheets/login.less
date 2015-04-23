@@ -2,7 +2,7 @@
 @import "style";
 
 section {
-  .title-dr {
+  .top-contents {
     position: relative;
 
     height: 340px;
@@ -19,17 +19,42 @@ section {
       position: absolute;
       display: block;
       width: 50%;
-      top: 20%;
+      top: 25%;
       left: 25%;
     }
+
     .description {
       position: absolute;
       display: block;
       width: 100%;
-      top: 55%;
+      top: 60%;
       color: @color-gray-500;
-      font-size: 26px;
+      font-size: 20px;
       text-align: center;
     }
+  }
+
+  .center-contents {
+
+    height: 300px;
+    background-color: @color-bg-white;
+
+    .site-description {
+      font-size: 20px;
+    }
+
+    .github {
+      display: inline-block;
+      margin: 15px 0 0 auto;
+      width: 300px;
+      height: 60px;
+      background-color: @color-blue-light-600;
+      box-shadow: 0 2px 0 0 rgba(0,0,0,0.6);
+      line-height: 30px;
+      font-size: 15px;
+      font-weight: 100;
+      color: @color-text-gray;
+      text-align: center;
+  }
   }
 }
