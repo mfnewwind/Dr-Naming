@@ -1,11 +1,16 @@
 var Vue = require('vue');
 var request = require('superagent');
 
-
-var doctorNaminG = new Vue({
-  el: '#DNG',
-  data: {
-    title: 'DoctorNaminG'
+window.doctorNaminG = new Vue({
+  el: '#DN',
+  components: {
+    header: require('./header')
   },
-  methods: {}
+  data: {
+    title: 'DoctorNaminG',
+    avatar: {}
+  },
+  methods: {},
+  ready: function() {
+  }
 });
