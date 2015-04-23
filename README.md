@@ -60,6 +60,8 @@ $ npm install
 
 ```sh
 $ npm install # 初回のみ
+$ brew install mongodb # mongodbがなければ
+$ mongod --dbpath /tmp # 別ウィンドウ
 $ npm run dev
 ```
 
