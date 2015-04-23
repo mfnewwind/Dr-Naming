@@ -8,7 +8,7 @@ var fileSchema = new mongoose.Schema({
   path: String,
   url: String,
   status: String,
-  result: []
+  result: mongoose.Schema.Types.Mixed
 });
  
 var branchSchema = new mongoose.Schema({
