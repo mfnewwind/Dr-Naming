@@ -11,10 +11,83 @@
   background: @color-white;
   border-radius: 2px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+  color: @color-gray-800;
 }
 
-.title-content {
-  margin-bottom: 15px;
+.app-title {
+  height: 40px;
   color: @color-white;
 }
+
+.app-left {
+  float: left;
+  width: 270px;
+}
+
+.app-right {
+  margin-left:270px;
+  width:690px;
+}
+
+// teams
+.team-type {
+  margin: 15px 0px 15px 15px;
+  color: @color-gray-600;
+}
+.team.selected {
+  background: @color-gray-300;
+}
+.team {
+  width: 270px;
+  height: 60px;
+  color: @color-gray-800;
+
+  .team-icon {
+    float: left;
+    width: 75px;
+    margin-left: -100%;
+    padding: 7.5px 0px 0px 15px;
+    img {
+      width: 45px;
+      height: 45px;
+    }
+  }
+  .team-content{
+    float: left;
+    width: 100%;
+    padding: 10px 0px 0px 75px;
+    span {
+      display: block;
+    }
+  }
+  .arrow {
+    // TODO font指定
+    float: left;
+    width: 30px;
+    margin-left: -30px;
+    height: 60px; 
+    line-height: 60px;
+    color: @color-white;
+  }
+}
+
+.location-title {
+  padding: 15px 15px 15px 15px;
+  .highlight {
+    color: @color-blue-light-600;
+  }
+  .right-btn {
+    // TODO
+  }
+}
+
+.select-repository {
+  .table {
+    min-height: 500px;
+  }
+  .select-repository-footer {
+    padding: 0px 15px 15px 15px;
+  }
+}
+
 
