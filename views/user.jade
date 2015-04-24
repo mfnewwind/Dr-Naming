@@ -7,34 +7,7 @@ block content
         span.font26px Add new repositories
       div.app-container
         div.app-left
-          div.team-type 
-            span.font16px 個人
-          div.team
-            div.team-content
-              span.font18px mf-new-wind
-              span.font12px Repositories 12
-             div.team-icon
-              img(src='/images/avatar_dummy.png')
-            div.arrow
-              span >
-          div.team-type 
-            span.font16px チーム
-          div.team
-            div.team-content
-              span.font18px mf-new-wind
-              span.font12px Repositories 12
-             div.team-icon
-              img(src='/images/avatar_dummy.png')
-            div.arrow
-              span >
-          div.team.selected
-            div.team-content
-              span.font18px mf-new-wind
-              span.font12px Repositories 12
-             div.team-icon
-              img(src='/images/avatar_dummy.png') 
-            div.arrow
-              span >
+          include ./teams.jade
         div.app-right
           div.select-repository
             div.location-title
