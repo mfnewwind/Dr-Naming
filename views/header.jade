@@ -7,14 +7,14 @@ script#header_component(type='x-template')
       div.title
         h1 Doctor NaminG
         img.logo(src='/images/header_logo.png')
-    a.btn.github(href='/auth/github') Github
-    div.avatar(v-show='github')
-      img.face.hide(src='{{github.avatar_url}}')
-      span.name {{github.name}}
+    a.btn.github(href='/auth/github' v-show='!github') Sign in
+    div.avatar(v-if='github')
+      img.face(v-attr='src: github.avatar_url')
+      span.name {{github.display_name}}
       span.repo Repositories {{github.public_repos}}
       nav
         ul.smart-list
-          a.wrapper(href='/repo/{{github.login}}')
+          a.wrapper(href='/repo/{{github.user_name}}')
             li
               i.fa.fa-github-square.icon
               span Repositories

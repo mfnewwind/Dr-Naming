@@ -10,9 +10,8 @@ module.exports = {
       .accept('json')
       .end(function(err, res) {
         if (err)  { return console.log('user data get error: ', err); }
-        if (!res) { return; }
 
-        _this.$root.$data.avatar.github = res.body._json;
+        _this.$root.$data.avatar.github = res.body.auth ? res.body : null;
         _this.$emit('avatar-loaded');
       });
 
