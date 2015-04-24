@@ -3,12 +3,25 @@ var mongoose = require('mongoose');
 var repoSchema = new mongoose.Schema({
   repo_name: String, // ex. [repo_name]
   repo_url: String, // ex. github.com/[user_name]/[repo_name]
-  sync: Boolean
+  sync: {
+    type: Boolean,
+    default: false
+  }
 });
 
 var userSchema = new mongoose.Schema({
-  github_id: String,
-  orgs: [], //organizations
+  github_id: {
+    type: String,
+    unique: true
+  },
+  email: {
+    type: String,
+    default: ''
+  },
+  orgs: {
+    type: Array,
+    default: []
+  },
   repos: [ repoSchema ],
   created_at: {
     type: Date,
