@@ -1,4 +1,29 @@
 extends layout
 
 block content
-  # ココに書く
+  section.app-wrapper
+    div.site-container
+      div.app-title
+        span.font26px Add new repositories
+      div.app-container
+        div.app-left
+          include ./teams.jade
+        div.app-right
+          div.select-repository
+            div.location-title
+              span.highlight mf-new-wind
+              span  > Select repository
+            div.table
+              div.table-line-title
+                div.table-item.number.center
+                  span #
+                div.table-item.width280
+                  span Repository
+                div.table-item.width180
+                  span Author
+                div.table-item.width140
+                  span Update Date
+                div.table-item.width20
+              include ./test_table_select_repo.jade
+            div.select-repository-footer
+              span Selected repositories: 12
