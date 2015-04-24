@@ -1,4 +1,19 @@
 extends layout
 
 block content
-  # ココに書く
+  section.app-wrapper
+    // TODO:site-container内のものはdocument系ページ全てで使えるように切り出す
+    div.site-container
+      div.location-contents
+        div.title
+          span.team mf-new-wind >
+          span.repository android-fm
+      div.app-container
+        div.header
+          div.tabbar
+            div.tab
+        div.file-list-contents
+        div.file-location-contents
+        div.file-details
+        div.search-box
+        div.codeview-contents
