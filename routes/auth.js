@@ -47,7 +47,7 @@ function updateUser(github_user, user) {
 
     User.update(
       { id: user.id },
-      { email: github_email },
+      { email: github_user.email },
       function(err, raw) {
         if (err) throw err;
         console.log('user updated: ', raw);
@@ -55,8 +55,6 @@ function updateUser(github_user, user) {
     );
 
   }
-
-
 
 }
 
