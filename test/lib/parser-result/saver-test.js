@@ -15,6 +15,7 @@ var EXAMPLE_JS = Path.resolve(__dirname, '../../files/example.js');
 
 
 describe('Unit test for lib/parser-result/saver.js', function () {
+/*
   describe('save', function () {
     var repo_name = 'github.com/user/repo';
     var file = {
@@ -43,5 +44,5 @@ describe('Unit test for lib/parser-result/saver.js', function () {
         finally { done(err); }
       });
     });
-  });
+  });*/
 });
