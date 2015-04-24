@@ -4,7 +4,11 @@ var passport = require('passport');
 
 // トップ
 router.get('/', function(req, res, next) {
-  res.render('index', {});
+  if (req.isAuthenticated()) {
+    res.render('index', {});
+  } else {
+    res.render('login', {});
+  }
 });
 
 // ログインページ
@@ -29,12 +33,12 @@ router.get('/select_repo', function(req, res){
 });
 
 // リポジトリ一覧
-router.get('/:user', function(req, res){
+router.get('/repo/:user', function(req, res){
   res.render('user', {});
 });
 
 // プロジェクトページ (変数, 関数, クラス一覧, コードビュー)
-router.get('/:user/:repo', function(req, res){
+router.get('/repo/:user/:repo', function(req, res){
   res.render('repo', {});
 });
 

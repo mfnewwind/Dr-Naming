@@ -27,10 +27,10 @@ router.get('/github/callback',
         if (err) return console.error(err);
         if (user) {
           console.log('user exist.');
-          updateUser(user);
+          updateUser(req.user, user);
         } else {
           console.log('user is undefined.');
-          createUser(req);
+          createUser(req.user);
         }
       });
 
@@ -38,9 +38,40 @@ router.get('/github/callback',
 });
 
 // ログイン時にユーザデータの更新
-function updateUser(user) {}
+function updateUser(github_user, user) {
+
+  // user data updated?
+  if (
+    github_user.email !== user.email
+  ) {
+
+    User.update(
+      { id: user.id },
+      { email: github_email },
+      function(err, raw) {
+        if (err) throw err;
+        console.log('user updated: ', raw);
+      }
+    );
+
+  }
+
+
+
+}
 
 // 初回ログイン時にユーザデータ登録
-function createUser(user) {}
+function createUser(github_user) {
+
+  new User({
+    github_id: github_user.id,
+    email: github_user.email
+  })
+
+  .save(function(err) {
+    if (err) throw err;
+  });
+
+}
 
 module.exports = router;
