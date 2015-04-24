@@ -4,7 +4,11 @@ var passport = require('passport');
 
 // トップ
 router.get('/', function(req, res, next) {
-  res.render('index', {});
+  if (req.isAuthenticated()) {
+    res.render('index', {});
+  } else {
+    res.render('login', {});
+  }
 });
 
 // ログインページ
