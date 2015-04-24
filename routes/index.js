@@ -43,6 +43,11 @@ router.get('/repo/:user/:repo', function(req, res){
 });
 
 
+// コードレビューページ(確認用)　TODO:おかしかったら書き直して。
+router.get('/document_codeview', function(req, res){
+  res.render('repo', {});
+});
+
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) { return next(); }
     res.redirect('/login');
