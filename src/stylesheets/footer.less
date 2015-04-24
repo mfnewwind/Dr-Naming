@@ -2,7 +2,6 @@
 @import "style";
 
 footer {
-  padding: 20px;
   height: 80px;
   background-color: @color-bg-darkgray;
 
@@ -15,10 +14,19 @@ footer {
     height: 37px;
   }
 
+  .line {
+    margin-top: 20px;
+    &:first-child {
+      margin-left: 10px;
+    }
+    &:last-child {
+      margin-right: 10px;
+    }
+  }
+
   span, p {
     line-height: 37px;
     margin-left: 40px;
-
   }
 
   p {
