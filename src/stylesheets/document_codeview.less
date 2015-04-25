@@ -6,14 +6,12 @@ section {
       float: left;
       width: 270px;
       font-family: Roboto;
-      border-right: inset 1px @color-gray-300;
-      // TODO 下いっぱいまで伸びるようにする
 
       .title {
         color: @color-blue-light-600;
         line-height: 36px;
         margin-left: 15px;
-        margin-top: 15px;
+        padding-top: 15px;
       }
       .file-list {
         font-size: 14px;
@@ -49,15 +47,17 @@ section {
         }
       }
     }
-
     .right-contents {
+      width: 690px;
       margin-left: 270px;
+      height: 100%;
+      border-left: inset 1px rgba(0,0,0,0.1);
 
       .file-location-contents {
         font-family: Roboto;
         line-height: 36px;
         margin-left: 15px;
-        margin-top: 15px;
+        padding-top: 15px;
 
         .repository {
           color: @color-blue-light-600;
@@ -70,6 +70,124 @@ section {
         }
         i.fa.fa-angle-right {
           margin: 0 5px;
+        }
+      }
+      .file-details {
+        color: @color-gray-600;
+        font-size: 14px;
+        margin: 5px 0 10px 15px;
+
+        .detail {
+          margin-right: 5px;
+        }
+      }
+      .codeview-contents {
+
+        .shadow {
+          position: absolute;
+          width: 690px;
+          box-shadow: 0px 5px 5px rgba(0,0,0,0.2) inset; 
+          height: 10px;         
+        }
+        table {
+          position: relative;
+          border: 0;
+          line-height: 24px;
+          font-size: 14px;
+          border-collapse: collapse;
+
+          td {
+            padding: 0px 5px;
+          }
+          .line {
+            display: block;
+            background-color: @color-gray-200;
+            color: @color-gray-600;
+            text-align: right;
+          }
+          .code {
+            font-family: Roboto;
+
+            .class, .function, .variable {
+              position: relative;
+              color: @color-blue-light-800;
+
+              &:hover {
+                background-color: @color-blue-light-600;
+                color: @color-white;
+              }
+              &:hover nav.detail {
+                display: block;
+              }
+              nav.detail {
+                box-shadow: 0 2px 5px 5px rgba(0,0,0,0.2);
+                display: none;
+                position: absolute;
+                top: 25px;
+                left: 2px;
+                text-align: left;
+                z-index: 100;
+
+                table {
+                  background-color: @color-white;
+                  color: @color-gray-800;
+                  font-size: 12px;
+
+                  td {
+                    border-bottom: inset 1px rgba(0,0,0,0.05);
+                    padding: 5px 10px;
+                    max-width: 250px;
+                  }
+
+                  span {
+                    overflow-wrap: break-word;
+                    word-wrap: break-word;
+                  }
+
+                  tr.header {
+                    background-color: @color-blue-light-600;
+                    color: @color-white;
+                    line-height: 30px;
+
+                    .name {
+                      font-size: 20px;
+                    }
+                    .type {
+                      display: block;
+                      text-align: right;
+                      padding-right: 10px;
+                    }
+                  }
+                  .tag {
+
+                  }
+                  .description {
+                    vertical-align: top;
+                  }
+                  .frequency {
+
+                  }
+                }
+                .projection {
+                  position: absolute;
+                  width: 100%;
+                  height: 8px;
+                  top: -8px;
+                  right: 0;
+                  &:before {
+                    content: "";
+                    position: absolute;
+                    top: -8px;
+                    left: 5px;
+                    width: 0;
+                    height: 0;
+                    border: 8px solid transparent;
+                    border-bottom: 8px solid @color-blue-light-600;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
