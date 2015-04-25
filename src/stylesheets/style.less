@@ -81,6 +81,15 @@ label.css-label.fav {
   width: 40px;
   color: @color-gray-500;
 }
+.table-item.arrow {
+  width: 40px;
+  float: right;
+  .fa {
+    color: @color-gray-300;
+    font-size: 26px;
+    vertical-align: middle;
+  }
+}
 .table-line {
   line-height: 12px;
   border-bottom: 1px solid @color-gray-200;
@@ -93,17 +102,12 @@ label.css-label.fav {
   .fa-exclamation-triangle {
     color: @color-red-400;
   }
-  .fa.fa-angle-right, .fa.fa-angle-left {
-    color: @color-gray-300;
-    font-size: 26px;
-    vertical-align: middle;
-  }
   &:hover {
     background: @color-blue-light-600;
     span {
       color: @color-white;
     }
-    .fa-check, .fa-exclamation-triangle, .fa-angle-right, .fa-angle-left {
+    .fa-check, .fa-exclamation-triangle, .fa-angle-right, .fa-angle-left, .fa-angle-up, .fa-angle-down {
       color: @color-white;
     }
   }
@@ -126,6 +130,9 @@ label.css-label.fav {
 }
 .width80 {
   width: 80px;
+}
+.width100 {
+  width: 100px;
 }
 .width140 {
   width: 140px;
