@@ -1,4 +1,18 @@
 extends layout
 
 block content
-  # ココに書く
+  section.app-wrapper
+    div.site-container
+      div.app-title
+        span.font26px Introduction
+      div.app-container
+        div.tab-menu
+          ul
+            li.selected
+              span Dr.NaminG とは
+            li
+              span 使い方
+      div#intro-start
+        p.intro-description さあ、始めよう。
+        a.btn.github-login(href='/auth/github') Githubでログイン
+        p.github-description Dr.NaminGを利用するには<br>GitHubのアカウントが必要です。
