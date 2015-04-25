@@ -1,5 +1,6 @@
 @import "style";
 
+// TODO　ネスト深すぎサーセン
 section {
   .app-container {
     .file-list-contents {
@@ -82,17 +83,20 @@ section {
         }
       }
       .codeview-contents {
+        position: relative;
 
         .shadow {
           position: absolute;
           width: 690px;
           box-shadow: 0px 5px 5px rgba(0,0,0,0.2) inset; 
-          height: 10px;         
+          height: 10px;
+          z-index: 100px;    
+          // TODO 影がコードビュー部分の上に表示されなうい、、、、、、、、、   
         }
         table {
           position: relative;
           border: 0;
-          line-height: 24px;
+          line-height: 20px;
           font-size: 14px;
           border-collapse: collapse;
 
@@ -116,10 +120,10 @@ section {
                 background-color: @color-blue-light-600;
                 color: @color-white;
               }
-              &:hover nav.detail {
+              &:hover nav.name-detail {
                 display: block;
               }
-              nav.detail {
+              nav.name-detail {
                 box-shadow: 0 2px 5px 5px rgba(0,0,0,0.2);
                 display: none;
                 position: absolute;
@@ -130,8 +134,8 @@ section {
 
                 table {
                   background-color: @color-white;
-                  color: @color-gray-800;
-                  font-size: 12px;
+                  color: @color-gray-600;
+                  font-size: 14px;
 
                   td {
                     border-bottom: inset 1px rgba(0,0,0,0.05);
@@ -144,10 +148,14 @@ section {
                     word-wrap: break-word;
                   }
 
+                  span.title {
+                    color: @color-blue-light-600;
+                  }
+
                   tr.header {
                     background-color: @color-blue-light-600;
                     color: @color-white;
-                    line-height: 30px;
+                    line-height: 25px;
 
                     .name {
                       font-size: 20px;
@@ -158,14 +166,8 @@ section {
                       padding-right: 10px;
                     }
                   }
-                  .tag {
-
-                  }
                   .description {
                     vertical-align: top;
-                  }
-                  .frequency {
-
                   }
                 }
                 .projection {
