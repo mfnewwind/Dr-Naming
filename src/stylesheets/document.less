@@ -2,24 +2,54 @@
 
 section {
   .location-contents {
-    padding: 15px 15px 15px 0;
+    height: 40px;
 
     .title {
-      font-size: 24px;
-      //TODO font
+      font-size: 26px;
+      font-family: Roboto;
 
       .team {
         color: @color-white;
       }
+      .fa.fa-angle-right {
+        color: @color-white;
+        margin: 0 5px 0 20px;
+      }
       .repository {
-        margin-left: 5px;
+        color: @color-gray-800;
       }
     }
   }
 
   .app-container {
-    .header {
 
+    .tab-contents {
+      border-bottom: inset 1px @color-gray-300;
+      font-family: Roboto;
+
+      ul {
+        margin: 0;
+        text-align: center;
+        line-height: 36px;
+        color: @color-gray-600;
+
+        li {
+          display:inline-block;
+          list-style-type: none;
+          text-decoration: none;
+          text-align: center;
+          width: 180px;
+
+          &:hover {
+            border-bottom: medium solid @color-blue-light-600;
+            color: @color-blue-light-600;
+          }
+        }
+        .selected {
+          border-bottom: medium solid @color-blue-light-600;
+          color: @color-blue-light-600;
+        }
+      }
     }
   }
 }
