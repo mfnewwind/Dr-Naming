@@ -11,6 +11,8 @@ var chai = require('chai');
 var sinon = require('sinon');
 var sinonChai = require('sinon-chai');
 
+require('../../lib/database');
+
 var parser = require('../../lib/parser');
 var FileQueue = require('../../lib/file-queue');
 
@@ -181,7 +183,7 @@ describe('Unit test for lib/parser.js', function () {
       
       parser.enqueueFile(file);
       
-      q.on('parsed', function (err, file, results) {
+      q.on('parsed', function F(err, file, results) {
         try {
           expect(err).to.be.null;
           expect(file).to.have.property('local_path').that.equal(file.local_path);
@@ -189,7 +191,18 @@ describe('Unit test for lib/parser.js', function () {
         }
         
         catch (e) { err = e; }
-        finally { done(err); }
+        finally {
+          q.removeListener('parsed', F);
+          done(err);
+        }
+      });
+    });
+  });
+  
+  describe('enqueueRepo()', function () {
+    it('should not throw any error', function (done) {
+      parser.enqueueRepo('github.com/mfnewwind/newwind', function (err, repo, results) {
+        done(err);
       });
     });
   });
