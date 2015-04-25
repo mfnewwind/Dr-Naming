@@ -93,12 +93,17 @@ label.css-label.fav {
   .fa-exclamation-triangle {
     color: @color-red-400;
   }
+  .fa.fa-angle-right, .fa.fa-angle-left {
+    color: @color-gray-300;
+    font-size: 26px;
+    vertical-align: middle;
+  }
   &:hover {
     background: @color-blue-light-600;
     span {
       color: @color-white;
     }
-    .fa-check,.fa-exclamation-triangle {
+    .fa-check, .fa-exclamation-triangle, .fa-angle-right, .fa-angle-left {
       color: @color-white;
     }
   }
@@ -107,13 +112,6 @@ label.css-label.fav {
   color: @color-gray-500;
   line-height: 12px;
   border-bottom: 3px solid @color-gray-200;
-}
-.table-line-selected {
-  line-height: 12px;
-  background: @color-blue-light-600;
-  span {
-    color: @color-white;
-  }
 }
 
 // width
