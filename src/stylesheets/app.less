@@ -60,13 +60,13 @@
     }
   }
   .arrow {
-    // TODO font指定
     float: left;
     width: 30px;
     margin-left: -30px;
     height: 60px;
-    line-height: 60px;
     color: @color-white;
+    font-size: 32px;
+    line-height: 60px;
   }
 }
 
@@ -80,13 +80,6 @@
   }
 }
 
-.pagination {
-  float: right;
-  color: @color-gray-500;
-  .prev, .next {
-  }
-}
-
 .select-repository {
   border-left: 1px solid @color-gray-200;
   .table {
@@ -96,3 +89,29 @@
     padding: 5px 15px 15px 15px;
   }
 }
+
+.tab-menu {
+  margin-bottom: 15px;
+  border-bottom: inset 1px @color-gray-300;
+  font-family: Roboto;
+  ul {
+    margin: 0;
+    text-align: center;
+    line-height: 36px;
+    color: @color-gray-600;
+    li {
+      display:inline-block;
+      *display: inline;
+      *zoom: 1;
+      list-style-type: none;
+      text-decoration: none;
+      text-align: center;
+      width: 180px;
+    }
+    li.selected, li:hover{
+      border-bottom: medium solid @color-blue-light-600;
+      color: @color-blue-light-600;
+    }   
+  }   
+}   
+

@@ -1,4 +1,23 @@
 extends layout
 
 block content
-  # ココに書く
+  section.app-wrapper
+    // TODO:site-container内のものはdocument系ページ全てで使えるように切り出す
+    div.site-container
+      div.location-contents
+        div.title
+          span.team mf-new-wind
+          i.fa.fa-angle-right
+          span.repository android-fm
+      div.app-container
+        div.tab-menu
+          ul
+            li.selected
+              span Variable Names
+            li
+              span Function Names
+            li
+              span Class Names
+            li
+              span Code View
+        include ./repo_classes.jade
