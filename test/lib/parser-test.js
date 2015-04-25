@@ -15,6 +15,7 @@ require('../../lib/database');
 
 var parser = require('../../lib/parser');
 var FileQueue = require('../../lib/file-queue');
+var Repo = require('../../models/repo');
 
 var expect = chai.expect;
 chai.use(sinonChai);
@@ -200,6 +201,16 @@ describe('Unit test for lib/parser.js', function () {
   });
   
   describe('enqueueRepo()', function () {
+    var repo_name = 'github.com/mfnewwind/newwind';
+
+    it('should create repo', function (done) {
+      var repo = new Repo({ repo_name: repo_name });
+
+      repo.save(function (err) {
+        done(err);
+      });
+    });
+    
     it('should not throw any error', function (done) {
       parser.enqueueRepo('github.com/mfnewwind/newwind', function (err, repo, results) {
         done(err);
