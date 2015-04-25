@@ -55,7 +55,6 @@ label.css-label {
   -ms-user-select: none;
   user-select: none;
 }
-
 label.css-label.fav {
   background-image:url("../images/fav_icon.png");
 }
@@ -102,14 +101,14 @@ label.css-label.fav {
   .fa-exclamation-triangle {
     color: @color-red-400;
   }
-  &:hover {
-    background: @color-blue-light-600;
-    span, a{
-      color: @color-white;
-    }
-    .fa-check, .fa-exclamation-triangle, .fa-angle-right, .fa-angle-left, .fa-angle-up, .fa-angle-down {
-      color: @color-white;
-    }
+}
+.table-line.selected, .table-line:hover {
+  background: @color-blue-light-300;
+  span, a{
+    color: @color-white;
+  }
+  .fa-check, .fa-exclamation-triangle, .fa-angle-right, .fa-angle-left, .fa-angle-up, .fa-angle-down {
+    color: @color-white;
   }
 }
 .table-line-title {
