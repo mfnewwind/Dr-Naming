@@ -84,15 +84,12 @@ section {
       }
       .codeview-contents {
         position: relative;
+        min-width: 100%;
+        overflow-x: scroll;
+        overflow-y: visible;
+        box-shadow: 0px 5px 5px rgba(0,0,0,0.2) inset; 
+        //TODO :　影セルに隠れるなふざけるな
 
-        .shadow {
-          position: absolute;
-          width: 690px;
-          box-shadow: 0px 5px 5px rgba(0,0,0,0.2) inset; 
-          height: 10px;
-          z-index: 100px;    
-          // TODO 影がコードビュー部分の上に表示されなうい、、、、、、、、、   
-        }
         table {
           position: relative;
           border: 0;
@@ -168,6 +165,22 @@ section {
                   }
                   .description {
                     vertical-align: top;
+
+                    .edit {
+                      position: relative;
+                      color: @color-white;
+                      background-color: @color-gray-500;
+                      width: 40px;
+                      line-height: 18px;
+                      float: right;
+                      text-align: center;
+                      margin-right: -10px;
+                      box-shadow: 0 1px 0 0 rgba(0,0,0,0.2);
+
+                      span {
+                        font-size: 10px;
+                      }
+                    }
                   }
                 }
                 .projection {
