@@ -45,6 +45,7 @@
     "sinon": "^1.14.1",
     "sinon-chai": "^2.7.0",
     "superagent": "^1.2.0",
+    "temporary": "0.0.8",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "vue": "^0.11.6",
