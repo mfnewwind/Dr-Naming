@@ -5,6 +5,9 @@ section {
     .file-list-contents {
       float: left;
       width: 270px;
+      font-family: Roboto;
+      border-right: inset 1px @color-gray-300;
+      // TODO 下いっぱいまで伸びるようにする
 
       .title {
         color: @color-blue-light-600;
@@ -13,36 +16,60 @@ section {
         margin-top: 15px;
       }
       .file-list {
+        font-size: 14px;
+
         ul {
           line-height: 36px;
           padding: 0px;
           margin: 0px;
+        }
+        li {
+          list-style-type: none;
+          color: @color-gray-600;
+          padding-left: 15px;
 
-          li {
-            list-style-type: none;
-            color: @color-gray-600;
-            padding-left: 15px;
-
-            i.fa.fa-file-code-o {
-              color: @color-blue-light-600;
-              margin-right: 5px;
-            }
+          &:hover {
+            background-color: @color-gray-200;
             i.fa.fa-angle-right {
-              float: right;
-              visibility: hidden;
-              color: @color-blue-light-600;
-              font-size: 20px;
-              line-height: 36px;
-              margin-right: 5px
-            }
-
-            &:hover {
-              background-color: @color-gray-200;
-              i.fa.fa-angle-right {
-                visibility: visible;
-              }
+              visibility: visible;
             }
           }
+        }
+        i.fa.fa-file-code-o {
+          color: @color-blue-light-600;
+          margin-right: 5px;
+        }
+        i.fa.fa-angle-right {
+          float: right;
+          visibility: hidden;
+          color: @color-blue-light-600;
+          font-size: 20px;
+          line-height: 36px;
+          margin-right: 5px
+        }
+      }
+    }
+
+    .right-contents {
+      margin-left: 270px;
+
+      .file-location-contents {
+        font-family: Roboto;
+        line-height: 36px;
+        margin-left: 15px;
+        margin-top: 15px;
+
+        .repository {
+          color: @color-blue-light-600;
+        }
+        .directory {
+
+        }
+        .current {
+          color: @color-blue-light-600;
+        }
+        i.fa.fa-angle-right {
+          margin: 0 5px;
         }
       }
     }
