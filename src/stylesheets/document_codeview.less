@@ -1,1 +1,50 @@
 @import "style";
+
+section {
+  .app-container {
+    .file-list-contents {
+      float: left;
+      width: 270px;
+
+      .title {
+        color: @color-blue-light-600;
+        line-height: 36px;
+        margin-left: 15px;
+        margin-top: 15px;
+      }
+      .file-list {
+        ul {
+          line-height: 36px;
+          padding: 0px;
+          margin: 0px;
+
+          li {
+            list-style-type: none;
+            color: @color-gray-600;
+            padding-left: 15px;
+
+            i.fa.fa-file-code-o {
+              color: @color-blue-light-600;
+              margin-right: 5px;
+            }
+            i.fa.fa-angle-right {
+              float: right;
+              visibility: hidden;
+              color: @color-blue-light-600;
+              font-size: 20px;
+              line-height: 36px;
+              margin-right: 5px
+            }
+
+            &:hover {
+              background-color: @color-gray-200;
+              i.fa.fa-angle-right {
+                visibility: visible;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
