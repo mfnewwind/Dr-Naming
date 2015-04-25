@@ -84,9 +84,21 @@ label.css-label.fav {
 .table-line {
   line-height: 12px;
   border-bottom: 1px solid @color-gray-200;
+  .fa {
+    font-size: 14px;
+  }
+  .fa-check {
+    color: @color-green-light-500;
+  }
+  .fa-exclamation-triangle {
+    color: @color-red-400;
+  }
   &:hover {
     background: @color-blue-light-600;
     span {
+      color: @color-white;
+    }
+    .fa-check,.fa-exclamation-triangle {
       color: @color-white;
     }
   }
