@@ -212,7 +212,7 @@ describe('Unit test for lib/parser.js', function () {
     });
     
     it('should not throw any error', function (done) {
-      parser.enqueueRepo('github.com/mfnewwind/newwind', function (err, repo, results) {
+      parser.enqueueRepo(repo_name, function (err, repo, results) {
         done(err);
       });
     });
