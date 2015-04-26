@@ -5,7 +5,7 @@ var passport = require('passport');
 // トップ
 router.get('/', function(req, res, next) {
   if (req.isAuthenticated()) {
-    res.render('index', {});
+    res.render('user, {});
   } else {
     res.render('login', {});
   }
