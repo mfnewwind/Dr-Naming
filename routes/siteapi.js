@@ -95,10 +95,13 @@ router.post('/add_repo', ensureAuthenticated, function(req, res) {
     { upsert: true },
     function(err, raw) {
       if (err) { res.set(500).json({ message: err }); }
-
-      parser.enqueueRepo(repository , function (err) {
-        if (err) { return res.set(500).json({message: err}); }
-        return res.set(200).json({message: '追加しました'});
+    
+      parser.enqueueRepo('token', repository , function (err) {
+        if (err) {
+          console.error(err);
+          return res.set(500).json({message: err});
+        }
+        return res.set(200).json({message: '追加しました' });
       });
     }
   );
