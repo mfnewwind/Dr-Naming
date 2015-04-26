@@ -5,6 +5,9 @@ module.exports = {
   template: '#repos_component',
   filters: {
     statusCheck: function(files) {
+
+      if (!files[0]) { return 'fa-question'; }
+
       if (_.some(files, { status: 'fail' })) {
         return 'fa-exclamation-triangle';
       }
