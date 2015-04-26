@@ -6,7 +6,8 @@ window.doctorNaminG = new Vue({
   components: {
     header: require('./header'),
     teams: require('./teams'),
-    repos: require('./repos')
+    select_repos: require('./select_repos'),
+    add_repos: require('./add_repos'),
   },
   data: {
     title: 'DoctorNaminG',

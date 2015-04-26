@@ -1,7 +1,7 @@
 var request = require('superagent');
 
 module.exports = {
-  template: '#repos_component',
+  template: '#select_repos_component',
   methods: {
     getRepositories: function(owner) {
       var _this = this;

@@ -6,16 +6,17 @@ block content
       div.app-title
         span.font26px Select repository
       div.app-container
-        div.app-left
-          include ./teams.jade
-        div.app-right
+        div.app-left(v-component='teams' v-with='avatar')
+        include ./teams.jade
+        div.app-right(v-component='select_repos' v-with='repos : repos')
+        script#select_repos_component(type='x-template')
           div.select-repository
             div.location-title
-              span.highlight mf-new-wind
+              span.highlight {{repos[0].owner.login}}
               i.fa.fa-angle-right
               span Select repository
               div.right-btn
-                a.btn.btn-base(href='/repo/user') Add Repository
+                a.btn.btn-base(href='/select_repo') Add Repository
             div.table
               div.table-line-title
                 div.table-item.number.center

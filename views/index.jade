@@ -8,8 +8,8 @@ block content
       div.app-container
         div.app-left(v-component='teams' v-with='avatar')
         include ./teams.jade
-        div.app-right(v-component='repos' v-with='repos : repos')
-        script#repos_component(type='x-template')
+        div.app-right(v-component='select_repos' v-with='repos : repos')
+        script#select_repos_component(type='x-template')
           div.select-repository
             div.location-title
               span.highlight {{repos[0].owner.login}}

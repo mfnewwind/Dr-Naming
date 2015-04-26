@@ -6,9 +6,10 @@ block content
       div.app-title
         span.font26px Add new repositories
       div.app-container
-        div.app-left(v-component='teams')
-          include ./teams.jade
-        div.app-right
+        div.app-left(v-component='teams' v-with='avatar')
+        include ./teams.jade
+        div.app-right(v-component='add_repos' v-with='repos : repos')
+        script#select_repos_component(type='x-template')
           div.select-repository
             div.location-title
               span.highlight mf-new-wind
