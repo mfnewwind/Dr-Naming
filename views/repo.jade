@@ -22,3 +22,14 @@ block content
               span Code View
         div.repo
           include ./repo_variables.jade
+  script(type="text/javascript").
+    function select_table_line(_this) {
+      if(_this.className.match('selected')){
+        _this.className='table-line';
+        _this.getElementsByTagName('i')[0].className='fa fa-angle-down icon';
+      }
+      else{
+        _this.className='table-line selected';
+        _this.getElementsByTagName('i')[0].className='fa fa-angle-up icon';
+      }
+    }

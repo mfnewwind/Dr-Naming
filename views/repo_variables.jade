@@ -7,7 +7,7 @@ div.table-line-title
     span Frequency
   div.table-item.width100.center
     span Meaning
-div.table-line(onclick="if(this.className.match('selected')){this.className='table-line';this.getElementsByTagName('i')[0].className='fa fa-angle-down icon';}else{this.className='table-line selected';this.getElementsByTagName('i')[0].className='fa fa-angle-up icon';}")
+div.table-line(onclick="select_table_line(this)")
   div.table-item.number.center
     span 1
   div.table-item.width180.highlight
@@ -55,7 +55,7 @@ div.table-line(onclick="if(this.className.match('selected')){this.className='tab
       div.table-item.width80.highlight
         a Code View
 
-div.table-line.selected(onclick="if(this.className.match('selected')){this.className='table-line';this.getElementsByTagName('i')[0].className='fa fa-angle-down icon';}else{this.className='table-line selected';this.getElementsByTagName('i')[0].className='fa fa-angle-up icon';}")
+div.table-line.selected(onclick="select_table_line(this)")
   div.table-item.number.center
     span 2
   div.table-item.width180.highlight
@@ -114,7 +114,7 @@ div.table-line.selected(onclick="if(this.className.match('selected')){this.class
         span comment
       div.table-item.width80.highlight
         a Code View
-div.table-line(onclick="if(this.className.match('selected')){this.className='table-line';this.getElementsByTagName('i')[0].className='fa fa-angle-down icon';}else{this.className='table-line selected';this.getElementsByTagName('i')[0].className='fa fa-angle-up icon';}")
+div.table-line(onclick="select_table_line(this)")
   div.table-item.number.center
     span 3
   div.table-item.width180.highlight
