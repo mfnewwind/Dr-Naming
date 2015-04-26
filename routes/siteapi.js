@@ -132,7 +132,7 @@ router.post('/remove_repo', ensureAuthenticated, function(req, res) {
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) { return next(); }
   res.json({
-    message: 'Welcome to Dr naminG.',
+    message: 'Welcome to Dr naming.',
     auth: false
   });
 }

@@ -1,7 +1,7 @@
 var Vue = require('vue');
 var request = require('superagent');
 
-window.doctorNaminG = new Vue({
+window.doctorNaming = new Vue({
   el: '#DN',
   components: {
     header: require('./header'),
@@ -10,7 +10,7 @@ window.doctorNaminG = new Vue({
     select_repos: require('./select_repos'),
   },
   data: {
-    title: 'DoctorNaminG',
+    title: 'DoctorNaming',
     avatar: {
       github: {},
       orgs: {}
