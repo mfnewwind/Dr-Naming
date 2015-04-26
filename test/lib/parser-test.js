@@ -201,6 +201,8 @@ describe('Unit test for lib/parser.js', function () {
   });
   
   describe('enqueueRepo()', function () {
+    var token = process.env.GITHUB_TOKEN;
+    
     describe('mfnewwind/newwind', function () {
       var repo_name = 'github.com/mfnewwind/newwind';
 
@@ -217,7 +219,7 @@ describe('Unit test for lib/parser.js', function () {
       });
 
       it('should not throw any error', function (done) {
-        parser.enqueueRepo(repo_name, function (err, repo, results) {
+        parser.enqueueRepo(token, repo_name, function (err, repo, results) {
           done(err);
         });
       });
@@ -239,7 +241,7 @@ describe('Unit test for lib/parser.js', function () {
       });
 
       it('should not throw any error', function (done) {
-        parser.enqueueRepo(repo_name, function (err, repo, results) {
+        parser.enqueueRepo(token, repo_name, function (err, repo, results) {
           done(err);
         });
       });
@@ -261,7 +263,7 @@ describe('Unit test for lib/parser.js', function () {
       });
 
       it('should not throw any error', function (done) {
-        parser.enqueueRepo(repo_name, function (err, repo, results) {
+        parser.enqueueRepo(token, repo_name, function (err, repo, results) {
           done(err);
         });
       });
