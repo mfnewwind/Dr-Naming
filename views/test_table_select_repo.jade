@@ -9,7 +9,7 @@ div.table-line(v-repeat='repos')
     span Update Date
   div.table-item.width20
     input(type="checkbox",id="sb-{{$index + 1}}").css-checkbox
-    label(for="sb-{{$index + 1}}").css-label
+    label(for="sb-{{$index + 1}}" v-on='click: onCheckboxClicked(this, repos[$index].owner.login, repos[$index].name)').css-label
 //- div.table-line
 //-   div.table-item.number.center
 //-     span 2
