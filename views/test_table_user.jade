@@ -5,15 +5,12 @@ div.table-line(v-repeat='repos')
     span {{repos[$index].name}}
   div.table-item.width180
     span {{repos[$index].owner.login}}
-  div.table-item.width140
+  div.table-item.width180
     span Update Date
   div.table-item.center.width60
     i.fa.fa-check.icon
-  div.table-item.center.width40
-    input(type="checkbox",id="sb-1").css-checkbox
-    label(for="sb-1").css-label.fav
-  //- div.table-item.arrow
-  //-   i.fa.fa-angle-right.icon
+  div.table-item.arrow
+    i.fa.fa-angle-right.icon
 //- div.table-line
 //-   div.table-item.number.center
 //-     span 2
