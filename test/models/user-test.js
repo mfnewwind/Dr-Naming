@@ -18,21 +18,21 @@ describe('### user models test', function () {
 
     try {
 
-      var user = new User({ id: user_id });
+      var user = new User({ github_id: user_id });
 
       user.save(function(err) {
 
         if (err) { throw err;}
 
         User.findOne({
-          id: user_id
+          github_id: user_id
         }, function(err, user) {
 
           if (err) { throw err; }
           console.log('userdata: ', JSON.stringify(user));
 
           User.remove({
-            id: user_id
+            github_id: user_id
           }, function(err) {
 
             if (err) { throw err;}
