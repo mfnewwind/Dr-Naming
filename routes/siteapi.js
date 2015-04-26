@@ -98,8 +98,28 @@ router.post('/add_repo', ensureAuthenticated, function(req, res) {
 
       parser.enqueueRepo(repository , function (err) {
         if (err) { return res.set(500).json({message: err}); }
-        return res.set(200).json({message: 追加しました});
+        return res.set(200).json({message: '追加しました'});
       });
+    }
+  );
+
+});
+
+router.post('/remove_repo', ensureAuthenticated, function(req, res) {
+
+  if (! req.body.owner) return res.set(500).json({ message: 'オーナーまたはチーム名がありません' });
+  if (! req.body.repo)  return res.set(500).json({ message: 'レポジトリ名がありません' });
+
+  var repository = 'github.com/' + req.body.owner + '/' + req.body.repo;
+
+  Repo.update({ repo_name: repository },
+    {
+      sync: false
+    },
+    { upsert: false },
+    function(err, raw) {
+      if (err) { res.set(500).json({ message: err }); }
+      return res.set(200).json({message: '削除しました'});
     }
   );
 
