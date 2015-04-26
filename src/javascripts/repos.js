@@ -1,7 +1,17 @@
 var request = require('superagent');
+var _ = require('lodash');
 
 module.exports = {
   template: '#repos_component',
+  filters: {
+    statusCheck: function(files) {
+      if (_.some(files, { status: 'fail' })) {
+        return 'fa-exclamation-triangle';
+      }
+
+      return 'fa-check';
+    }
+  },
   methods: {
     getRepositories: function(owner) {
       var _this = this;

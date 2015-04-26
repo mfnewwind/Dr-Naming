@@ -8,7 +8,7 @@ div.table-line(v-repeat='repos')
   div.table-item.width140
     span Update Date
   div.table-item.center.width60
-    i.fa.fa-check.icon
+    i.fa.icon(v-class='repos[$index].branches[0].files | statusCheck')
   div.table-item.arrow
     i.fa.fa-angle-right.icon
 //- div.table-line
