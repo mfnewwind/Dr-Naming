@@ -60,7 +60,7 @@ section {
         text-align: center;
         top: 140px;
 
-        .text {
+        .btn.text {
           display: inline-block;
           margin: 15px 0 0 auto;
           width: 320px;
@@ -70,8 +70,12 @@ section {
           line-height: 45px;
           font-size: 20px;
           font-weight: 100;
-          color: @color-text-gray;
+          color: @color-white;
           text-align: center;
+          &:hover {
+            background-color: @color-gray-300;
+            color: @color-gray-800;
+          }
         }
       }
     }
