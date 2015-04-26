@@ -8,7 +8,7 @@
   "scripts": {
     "postinstall": "gulp build",
     "start": "node ./bin/www",
-    "test": "mocha --colors --growl --bail --check-leaks --timeout 60000 test/**/*-test.js",
+    "test": "mocha --colors --growl --bail --check-leaks --timeout 100000 test/**/*-test.js",
     "dev": "node_modules/.bin/gulp"
   },
   "dependencies": {
