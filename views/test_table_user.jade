@@ -6,7 +6,7 @@ div.table-line(v-repeat='repos')
       span {{repos[$index].repo_name}}
     div.table-item.width180
       span {{repos[$index].owner}}
-    div.table-item.width140
+    div.table-item.width180
       span Update Date
     div.table-item.center.width60
       i.fa.icon(v-class='repos[$index].branches[0].files | statusCheck')
