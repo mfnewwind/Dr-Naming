@@ -107,6 +107,11 @@ label.css-label.fav {
     vertical-align: middle;
   }
 }
+.table-line-title {
+  color: @color-gray-500;
+  line-height: 12px; 
+  border-bottom: 3px solid @color-gray-300;
+}
 .table-line {
   line-height: 12px;
   border-bottom: 1px solid @color-gray-300;
@@ -120,7 +125,7 @@ label.css-label.fav {
     color: @color-red-400;
   }
 }
-.table-line.selected, .table-line:hover {
+.table-line.selected, .table-line:hover, .table-line.selected .children-table .table-line:hover {
   background: @color-blue-light-300;
   border-bottom: 0px solid @color-gray-300;
   span, a{
@@ -130,12 +135,25 @@ label.css-label.fav {
     color: @color-white;
   }
 }
-.table-line-title {
-  color: @color-gray-500;
-  line-height: 12px;
-  border-bottom: 3px solid @color-gray-300;
+.table-line.selected .children-table{
+  display: block;
+  span {
+    color: @color-gray-800;
+  }
+  a {
+    color: @color-blue-light-600;
+  }
 }
-
+.children-table {
+  display: none;
+  width: 970px;
+  padding: 0px 5px;
+  margin-left: -5px;
+  background: @color-gray-200;
+  -moz-box-shadow: 0 -5px 3px @color-gray-300 inset, 0 5px 3px @color-gray-300 inset;
+  -webkit-box-shadow: 0 -5px 3px @color-gray-300 inset, 0 5px 3px @color-gray-300 inset;
+  box-shadow: 0 -5px 3px @color-gray-300 inset, 0 5px 3px @color-gray-300 inset;
+}
 // width
 .width20 {
   width: 20px;

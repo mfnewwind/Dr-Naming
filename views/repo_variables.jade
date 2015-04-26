@@ -7,7 +7,7 @@ div.table-line-title
     span Frequency
   div.table-item.width100.center
     span Meaning
-div.table-line
+div.table-line(onclick="if(this.className.match('selected')){this.className='table-line';this.getElementsByTagName('i')[0].className='fa fa-angle-down icon';}else{this.className='table-line selected';this.getElementsByTagName('i')[0].className='fa fa-angle-up icon';}")
   div.table-item.number.center
     span 1
   div.table-item.width180.highlight
@@ -18,7 +18,44 @@ div.table-line
     span 追加
   div.table-item.arrow
     i.fa.fa-angle-down.icon
-div.table-line.selected
+  div.children-table
+    div.table-line-title
+      div.table-item.width40
+      div.table-item.number.center
+        span #
+      div.table-item.width180
+        span location
+      div.table-item.width100
+        span Class
+      div.table-item.width500
+        span Comment
+      div.table-item.width80
+    div.table-line
+      div.table-item.width40
+      div.table-item.number.center
+        span 1
+      div.table-item.width180
+        span location/location1
+      div.table-item.width100
+        span class
+      div.table-item.width500
+        span comment
+      div.table-item.width80.highlight
+        a Code View
+    div.table-line
+      div.table-item.width40
+      div.table-item.number.center
+        span 2
+      div.table-item.width180
+        span location/location1
+      div.table-item.width100
+        span class
+      div.table-item.width500
+        span comment
+      div.table-item.width80.highlight
+        a Code View
+
+div.table-line.selected(onclick="if(this.className.match('selected')){this.className='table-line';this.getElementsByTagName('i')[0].className='fa fa-angle-down icon';}else{this.className='table-line selected';this.getElementsByTagName('i')[0].className='fa fa-angle-up icon';}")
   div.table-item.number.center
     span 2
   div.table-item.width180.highlight
@@ -29,43 +66,55 @@ div.table-line.selected
     span 追加
   div.table-item.arrow
     i.fa.fa-angle-up.icon
-div.children-table
-  div.table-line-title
-    div.table-item.width40
-    div.table-item.number.center
-      span #
-    div.table-item.width180
-      span location 
-    div.table-item.width100
-      span Class
-    div.table-item.width500
-      span Comment
-    div.table-item.width80
-  div.table-line
-    div.table-item.width40
-    div.table-item.number.center
-      span 1
-    div.table-item.width180
-      span location/location1 
-    div.table-item.width100
-      span class
-    div.table-item.width500
-      span comment
-    div.table-item.width80.highlight
-      a Code View
-  div.table-line
-    div.table-item.width40
-    div.table-item.number.center
-      span 2
-    div.table-item.width180
-      span location/location2 
-    div.table-item.width100
-      span class
-    div.table-item.width500
-      span comment
-    div.table-item.width80.highlight
-      a Code View
-div.table-line
+  div.children-table
+    div.table-line-title
+      div.table-item.width40
+      div.table-item.number.center
+        span #
+      div.table-item.width180
+        span location 
+      div.table-item.width100
+        span Class
+      div.table-item.width500
+        span Comment
+      div.table-item.width80
+    div.table-line
+      div.table-item.width40
+      div.table-item.number.center
+        span 1
+      div.table-item.width180
+        span location/location1 
+      div.table-item.width100
+        span class
+      div.table-item.width500
+        span comment
+      div.table-item.width80.highlight
+        a Code View
+    div.table-line
+      div.table-item.width40
+      div.table-item.number.center
+        span 2
+      div.table-item.width180
+        span location/location1 
+      div.table-item.width100
+        span class
+      div.table-item.width500
+        span comment
+      div.table-item.width80.highlight
+        a Code View
+    div.table-line
+      div.table-item.width40
+      div.table-item.number.center
+        span 3
+      div.table-item.width180
+        span location/location1 
+      div.table-item.width100
+        span class
+      div.table-item.width500
+        span comment
+      div.table-item.width80.highlight
+        a Code View
+div.table-line(onclick="if(this.className.match('selected')){this.className='table-line';this.getElementsByTagName('i')[0].className='fa fa-angle-down icon';}else{this.className='table-line selected';this.getElementsByTagName('i')[0].className='fa fa-angle-up icon';}")
   div.table-item.number.center
     span 3
   div.table-item.width180.highlight
@@ -76,3 +125,40 @@ div.table-line
     span 追加
   div.table-item.arrow
     i.fa.fa-angle-down.icon
+  div.children-table
+    div.table-line-title
+      div.table-item.width40
+      div.table-item.number.center
+        span #
+      div.table-item.width180
+        span location
+      div.table-item.width100
+        span Class
+      div.table-item.width500
+        span Comment
+      div.table-item.width80
+    div.table-line
+      div.table-item.width40
+      div.table-item.number.center
+        span 1
+      div.table-item.width180
+        span location/location1
+      div.table-item.width100
+        span class
+      div.table-item.width500
+        span comment
+      div.table-item.width80.highlight
+        a Code View
+    div.table-line
+      div.table-item.width40
+      div.table-item.number.center
+        span 2
+      div.table-item.width180
+        span location/location1
+      div.table-item.width100
+        span class
+      div.table-item.width500
+        span comment
+      div.table-item.width80.highlight
+        a Code View
+
