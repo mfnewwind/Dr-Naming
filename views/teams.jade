@@ -1,7 +1,7 @@
 script#teams_component(type='x-template')
   div.team-type
     span.font16px 個人
-  div.team
+  div.team(v-on='click: tabTeam')
     div.team-content
       span.font18px {{github.user_name}}
       span.font12px Repositories 12
@@ -11,7 +11,7 @@ script#teams_component(type='x-template')
       i.fa.fa-angle-right.icon
   div.team-type 
     span.font16px チーム
-  div.team(v-repeat='orgs')
+  div.team(v-repeat='orgs' v-on='click: tabTeam(orgs[$index].name)')
     div.team-content
       span.font18px {{orgs[$index].name}}
       span.font12px Repositories {{$index}}

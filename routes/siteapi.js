@@ -47,8 +47,14 @@ router.get('/orgs', ensureAuthenticated, function(req, res) {
 
 router.get('/repos', ensureAuthenticated, function(req, res) {
 
+  console.log(req);
+
+  var api_route = req.query.owner ? 'orgs/' +  req.query.owner : 'users/' + req.user.username;
+
+  console.log(api_route);
+
   request
-  .get("https://api.github.com/users/" + req.user.username + "/repos")
+  .get("https://api.github.com/" + api_route + "/repos")
   // .set('Accept', 'application/vnd.github.moondragon+json')
   .set('Authorization', 'token ' + req.user.token)
   .end(function(err, repos) {

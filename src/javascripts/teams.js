@@ -2,21 +2,39 @@ var request = require('superagent');
 
 module.exports = {
   template: '#teams_component',
-  methods: {},
+  methods: {
+    tabTeam: function(owner) {
+      this.getRepositories(owner || '');
+    },
+    getRepositories: function(owner) {
+      var _this = this;
+      request
+        .get('/siteapi/repos')
+        .query({ owner: owner })
+        .accept('json')
+        .end(function(err, res) {
+          if (err)  { return console.log('user data get error: ', err); }
+
+          _this.$root.$data.repos = res.body.auth ? res.body.repos : null;
+        }
+      );
+    },
+    getOrganizations: function() {
+      var _this = this;
+      request
+        .get('/siteapi/orgs')
+        .accept('json')
+        .end(function(err, res) {
+          if (err)  { return console.log('user data get error: ', err); }
+
+          _this.$root.$data.avatar.orgs = res.body.auth ? res.body.orgs : null;
+        }
+      );
+    }
+  },
   ready: function() {
 
-    console.log('teams compoennt');
-
-    var _this = this;
-    request
-      .get('/siteapi/orgs')
-      .accept('json')
-      .end(function(err, res) {
-        if (err)  { return console.log('user data get error: ', err); }
-
-        _this.$root.$data.avatar.orgs = res.body.auth ? res.body.orgs : null;
-        // _this.$emit('avatar-loaded');
-      });
+    this.getOrganizations(null);
 
     this.$el.classList.remove('hide');
   }
