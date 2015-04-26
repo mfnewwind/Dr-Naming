@@ -87,8 +87,6 @@ section {
         min-width: 100%;
         overflow-x: scroll;
         overflow-y: visible;
-        box-shadow: 0px 5px 5px rgba(0,0,0,0.2) inset; 
-        //TODO :　影セルに隠れるなふざけるな
 
         table {
           position: relative;
@@ -96,6 +94,12 @@ section {
           line-height: 20px;
           font-size: 14px;
           border-collapse: collapse;
+          th.inset-shadow {
+            height: 5px;
+            box-shadow: 0px 5px 5px rgba(0,0,0,0.2) inset;
+            -webkit-box-shadow: 0px 5px 5px rgba(0,0,0,0.2) inset;
+            box-shadow: 0px 5px 5px rgba(0,0,0,0.2) inset;
+          }
 
           td {
             padding: 0px 5px;
