@@ -222,5 +222,49 @@ describe('Unit test for lib/parser.js', function () {
         });
       });
     });
+    
+    describe('mfnewwind/perl-parser', function () {
+      var repo_name = 'github.com/mfnewwind/perl-parser';
+
+      it('should create repo', function (done) {
+        Repo.remove({ repo_name: repo_name }, function (err) {
+          if (err) { return done(err); }
+
+          var repo = new Repo({ repo_name: repo_name });
+
+          repo.save(function (err) {
+            done(err);
+          });
+        });
+      });
+
+      it('should not throw any error', function (done) {
+        parser.enqueueRepo(repo_name, function (err, repo, results) {
+          done(err);
+        });
+      });
+    });
+    
+    describe('mfnewwind/java-parser', function () {
+      var repo_name = 'github.com/mfnewwind/java-parser';
+
+      it('should create repo', function (done) {
+        Repo.remove({ repo_name: repo_name }, function (err) {
+          if (err) { return done(err); }
+
+          var repo = new Repo({ repo_name: repo_name });
+
+          repo.save(function (err) {
+            done(err);
+          });
+        });
+      });
+
+      it('should not throw any error', function (done) {
+        parser.enqueueRepo(repo_name, function (err, repo, results) {
+          done(err);
+        });
+      });
+    });
   });
 });
