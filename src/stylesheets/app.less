@@ -35,13 +35,14 @@
   margin: 15px 0px 15px 15px;
   color: @color-gray-600;
 }
-.team.selected, .team:hover{
+.team.selected, div.team:hover{
   background: @color-gray-300;
 }
 .team {
   width: 270px;
   height: 60px;
   color: @color-gray-800;
+  cursor: pointer;
 
   .team-icon {
     float: left;
@@ -64,6 +65,7 @@
       display: block;
       width: 160px;
       overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
   .arrow {
