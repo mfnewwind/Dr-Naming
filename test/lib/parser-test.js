@@ -201,19 +201,25 @@ describe('Unit test for lib/parser.js', function () {
   });
   
   describe('enqueueRepo()', function () {
-    var repo_name = 'github.com/mfnewwind/newwind';
+    describe('mfnewwind/newwind', function () {
+      var repo_name = 'github.com/mfnewwind/newwind';
 
-    it('should create repo', function (done) {
-      var repo = new Repo({ repo_name: repo_name });
+      it('should create repo', function (done) {
+        Repo.remove({ repo_name: repo_name }, function (err) {
+          if (err) { return done(err); }
 
-      repo.save(function (err) {
-        done(err);
+          var repo = new Repo({ repo_name: repo_name });
+
+          repo.save(function (err) {
+            done(err);
+          });
+        });
       });
-    });
-    
-    it('should not throw any error', function (done) {
-      parser.enqueueRepo(repo_name, function (err, repo, results) {
-        done(err);
+
+      it('should not throw any error', function (done) {
+        parser.enqueueRepo(repo_name, function (err, repo, results) {
+          done(err);
+        });
       });
     });
   });

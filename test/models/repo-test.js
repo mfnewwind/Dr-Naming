@@ -17,10 +17,14 @@ describe('### Repo models test', function () {
   
   describe('Repo', function () {
     it('should create', function (done) {
-      var repo = new Repo({ repo_name: repo_name });
-      
-      repo.save(function (err) {
-        done(err);
+      Repo.remove({ repo_name: repo_name }, function (err) {
+        if (err) { return done(err); }
+        
+        var repo = new Repo({ repo_name: repo_name });
+
+        repo.save(function (err) {
+          done(err);
+        });
       });
     });
     
@@ -63,17 +67,19 @@ describe('### Repo models test', function () {
   
   describe('Repo:Branch', function () {
     it('should create with empty branch', function (done) {
-      var repo = new Repo({
-        repo_name: repo_name
-      });
-      
-      repo.branches.push({
-        branch_name: branch_name,
-        files: []
-      });
-      
-      repo.save(function (err) {
-        done(err);
+      Repo.remove({ repo_name: repo_name }, function (err) {
+        var repo = new Repo({
+          repo_name: repo_name
+        });
+
+        repo.branches.push({
+          branch_name: branch_name,
+          files: []
+        });
+
+        repo.save(function (err) {
+          done(err);
+        });
       });
     });
     
