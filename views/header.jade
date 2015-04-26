@@ -6,7 +6,7 @@ script#header_component(type='x-template')
       div.title
         h1 Doctor NaminG
         img.logo(src='/images/header_logo.png')
-    a.btn.github(href='/auth/github' v-show='!github') Sign in
+    a.btn.btn-base.github(href='/auth/github' v-show='!github') Sign in
     div.avatar(v-if='github')
       img.face(v-attr='src: github.avatar_url')
       span.name {{github.display_name}}
