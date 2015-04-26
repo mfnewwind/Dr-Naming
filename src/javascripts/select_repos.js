@@ -1,12 +1,12 @@
 var request = require('superagent');
 
 module.exports = {
-  template: '#add_repos_component',
+  template: '#select_repos_component',
   methods: {
     getRepositories: function(owner) {
       var _this = this;
       request
-        .get('/siteapi/repos')
+        .get('/siteapi/select_repos')
         .query({ owner: owner })
         .accept('json')
         .end(function(err, res) {
@@ -19,8 +19,8 @@ module.exports = {
     addRepository: function(owner, repo) {
       var _this = this;
       request
-        .get('/siteapi/add_repo')
-        .query({
+        .post('/siteapi/add_repo')
+        .send({
           owner: owner,
           repo: repo
         })
@@ -33,9 +33,10 @@ module.exports = {
       );
     },
     onCheckboxClicked: function(e, owner, repo) {
-      e.preventDefault();
+      e.$event.preventDefault();
 
-      
+      this.addRepository(owner, repo);
+
     }
   },
   ready: function() {

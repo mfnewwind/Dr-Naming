@@ -2,7 +2,7 @@
 /*jslint node: true */
 
 var mongoose = require('mongoose');
- 
+
 var fileSchema = new mongoose.Schema({
   file_name: String,
   path: String,
@@ -10,14 +10,19 @@ var fileSchema = new mongoose.Schema({
   status: String,
   result: mongoose.Schema.Types.Mixed
 });
- 
+
 var branchSchema = new mongoose.Schema({
   branch_name: String,
   files: [ fileSchema ]
 });
- 
+
 var repoSchema = new mongoose.Schema({
   repo_name: String,
+  owner: String,
+  sync: {
+    type: Boolean,
+    default: false
+  },
   branches: [ branchSchema ]
 });
 
