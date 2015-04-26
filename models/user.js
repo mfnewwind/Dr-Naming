@@ -9,6 +9,12 @@ var repoSchema = new mongoose.Schema({
   }
 });
 
+var orgSchema = new mongoose.Schema({
+  name: String,
+  github_id: String,
+  avatar_url: String
+});
+
 var userSchema = new mongoose.Schema({
   github_id: {
     type: String,
@@ -18,11 +24,9 @@ var userSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
-  orgs: {
-    type: Array,
-    default: []
-  },
+  orgs: [ orgSchema ],
   repos: [ repoSchema ],
+  token: String,
   created_at: {
     type: Date,
     default: Date.now

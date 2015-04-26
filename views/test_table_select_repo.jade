@@ -1,133 +1,133 @@
-div.table-line
+div.table-line(v-repeat='repos')
   div.table-item.number.center
-    span 1
+    span {{$index + 1}}
   div.table-item.width280
-    span Repository
+    span {{repos[$index].name}}
   div.table-item.width180
-    span Author
+    span {{repos[$index].owner.login}}
   div.table-item.width140
     span Update Date
   div.table-item.width20
-    input(type="checkbox",id="sb-1").css-checkbox
-    label(for="sb-1").css-label
-div.table-line
-  div.table-item.number.center
-    span 2
-  div.table-item.width280
-    span Repository
-  div.table-item.width180
-    span Author
-  div.table-item.width140
-    span Update Date
-  div.table-item.width20
-    input(type="checkbox",id="sb-2").css-checkbox
-    label(for="sb-2").css-label
-div.table-line
-  div.table-item.number.center
-    span 3
-  div.table-item.width280
-    span Repository
-  div.table-item.width180
-    span Author
-  div.table-item.width140
-    span Update Date
-  div.table-item.width20
-    input(type="checkbox",id="sb-3").css-checkbox
-    label(for="sb-3").css-label
-div.table-line
-  div.table-item.number.center
-    span 4
-  div.table-item.width280
-    span Repository
-  div.table-item.width180
-    span Author
-  div.table-item.width140
-    span Update Date
-  div.table-item.width20
-    input(type="checkbox",id="sb-4").css-checkbox
-    label(for="sb-4").css-label
-div.table-line
-  div.table-item.number.center
-    span 5
-  div.table-item.width280
-    span Repository
-  div.table-item.width180
-    span Author
-  div.table-item.width140
-    span Update Date
-  div.table-item.width20
-    input(type="checkbox",id="sb-5").css-checkbox
-    label(for="sb-5").css-label
-div.table-line
-  div.table-item.number.center
-    span 6
-  div.table-item.width280
-    span Repository
-  div.table-item.width180
-    span Author
-  div.table-item.width140
-    span Update Date
-  div.table-item.width20
-    input(type="checkbox",id="sb-6").css-checkbox
-    label(for="sb-6").css-label
-div.table-line
-  div.table-item.number.center
-    span 7
-  div.table-item.width280
-    span Repository
-  div.table-item.width180
-    span Author
-  div.table-item.width140
-    span Update Date
-  div.table-item.width20
-    input(type="checkbox",id="sb-7").css-checkbox
-    label(for="sb-7").css-label
-div.table-line
-  div.table-item.number.center
-    span 8
-  div.table-item.width280
-    span Repository
-  div.table-item.width180
-    span Author
-  div.table-item.width140
-    span Update Date
-  div.table-item.width20
-    input(type="checkbox",id="sb-8").css-checkbox
-    label(for="sb-8").css-label
-div.table-line
-  div.table-item.number.center
-    span 9
-  div.table-item.width280
-    span Repository
-  div.table-item.width180
-    span Author
-  div.table-item.width140
-    span Update Date
-  div.table-item.width20
-    input(type="checkbox",id="sb-9").css-checkbox
-    label(for="sb-9").css-label
-div.table-line
-  div.table-item.number.center
-    span 10
-  div.table-item.width280
-    span Repository
-  div.table-item.width180
-    span Author
-  div.table-item.width140
-    span Update Date
-  div.table-item.width20
-    input(type="checkbox",id="sb-10").css-checkbox
-    label(for="sb-10").css-label
-div.table-line
-  div.table-item.number.center
-    span 11
-  div.table-item.width280
-    span Repository
-  div.table-item.width180
-    span Author
-  div.table-item.width140
-    span Update Date
-  div.table-item.width20
-    input(type="checkbox",id="sb-11").css-checkbox
-    label(for="sb-11").css-label
-
+    input(type="checkbox",id="sb-{{$index + 1}}").css-checkbox
+    label(for="sb-{{$index + 1}}").css-label
+//- div.table-line
+//-   div.table-item.number.center
+//-     span 2
+//-   div.table-item.width280
+//-     span Repository
+//-   div.table-item.width180
+//-     span Author
+//-   div.table-item.width140
+//-     span Update Date
+//-   div.table-item.width20
+//-     input(type="checkbox",id="sb-2").css-checkbox
+//-     label(for="sb-2").css-label
+//- div.table-line
+//-   div.table-item.number.center
+//-     span 3
+//-   div.table-item.width280
+//-     span Repository
+//-   div.table-item.width180
+//-     span Author
+//-   div.table-item.width140
+//-     span Update Date
+//-   div.table-item.width20
+//-     input(type="checkbox",id="sb-3").css-checkbox
+//-     label(for="sb-3").css-label
+//- div.table-line
+//-   div.table-item.number.center
+//-     span 4
+//-   div.table-item.width280
+//-     span Repository
+//-   div.table-item.width180
+//-     span Author
+//-   div.table-item.width140
+//-     span Update Date
+//-   div.table-item.width20
+//-     input(type="checkbox",id="sb-4").css-checkbox
+//-     label(for="sb-4").css-label
+//- div.table-line
+//-   div.table-item.number.center
+//-     span 5
+//-   div.table-item.width280
+//-     span Repository
+//-   div.table-item.width180
+//-     span Author
+//-   div.table-item.width140
+//-     span Update Date
+//-   div.table-item.width20
+//-     input(type="checkbox",id="sb-5").css-checkbox
+//-     label(for="sb-5").css-label
+//- div.table-line
+//-   div.table-item.number.center
+//-     span 6
+//-   div.table-item.width280
+//-     span Repository
+//-   div.table-item.width180
+//-     span Author
+//-   div.table-item.width140
+//-     span Update Date
+//-   div.table-item.width20
+//-     input(type="checkbox",id="sb-6").css-checkbox
+//-     label(for="sb-6").css-label
+//- div.table-line
+//-   div.table-item.number.center
+//-     span 7
+//-   div.table-item.width280
+//-     span Repository
+//-   div.table-item.width180
+//-     span Author
+//-   div.table-item.width140
+//-     span Update Date
+//-   div.table-item.width20
+//-     input(type="checkbox",id="sb-7").css-checkbox
+//-     label(for="sb-7").css-label
+//- div.table-line
+//-   div.table-item.number.center
+//-     span 8
+//-   div.table-item.width280
+//-     span Repository
+//-   div.table-item.width180
+//-     span Author
+//-   div.table-item.width140
+//-     span Update Date
+//-   div.table-item.width20
+//-     input(type="checkbox",id="sb-8").css-checkbox
+//-     label(for="sb-8").css-label
+//- div.table-line
+//-   div.table-item.number.center
+//-     span 9
+//-   div.table-item.width280
+//-     span Repository
+//-   div.table-item.width180
+//-     span Author
+//-   div.table-item.width140
+//-     span Update Date
+//-   div.table-item.width20
+//-     input(type="checkbox",id="sb-9").css-checkbox
+//-     label(for="sb-9").css-label
+//- div.table-line
+//-   div.table-item.number.center
+//-     span 10
+//-   div.table-item.width280
+//-     span Repository
+//-   div.table-item.width180
+//-     span Author
+//-   div.table-item.width140
+//-     span Update Date
+//-   div.table-item.width20
+//-     input(type="checkbox",id="sb-10").css-checkbox
+//-     label(for="sb-10").css-label
+//- div.table-line
+//-   div.table-item.number.center
+//-     span 11
+//-   div.table-item.width280
+//-     span Repository
+//-   div.table-item.width180
+//-     span Author
+//-   div.table-item.width140
+//-     span Update Date
+//-   div.table-item.width20
+//-     input(type="checkbox",id="sb-11").css-checkbox
+//-     label(for="sb-11").css-label
+//- 
