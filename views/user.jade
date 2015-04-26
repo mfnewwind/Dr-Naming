@@ -10,12 +10,13 @@ block content
         span.font26px Select repository
       div.app-container.repositories
         div.app-left(v-component='teams' v-with='avatar')
+          - var route = '/siteapi/repos'
         include ./teams.jade
-        div.app-right(v-component='select_repos' v-with='repos : repos')
-        script#select_repos_component(type='x-template')
+        div.app-right(v-component='repos' v-with='repos : repos')
+        script#repos_component(type='x-template')
           div.select-repository
             div.location-title
-              span.highlight {{repos[0].owner.login}}
+              span.highlight {{repos[0].owner}}
               i.fa.fa-angle-right
               span Select repository
               div.right-btn

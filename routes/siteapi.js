@@ -48,6 +48,26 @@ router.get('/orgs', ensureAuthenticated, function(req, res) {
 
 });
 
+router.get('/repos', ensureAuthenticated, function(req, res) {
+
+  var api_route = req.query.owner ? 'orgs/' +  req.query.owner : 'users/' + req.user.username;
+
+  Repo
+  .find({ sync: true, owner: req.query.owner || req.user.username })
+  .select('-_id repo_name owner sync branches')
+  .exec(function(err, repos) {
+
+    if (err) return res.set(500).json({ message: err });
+
+    return res.json({
+      auth: true,
+      repos: repos
+    });
+
+  });
+
+});
+
 router.get('/select_repos', ensureAuthenticated, function(req, res) {
 
   var api_route = req.query.owner ? 'orgs/' +  req.query.owner : 'users/' + req.user.username;
@@ -56,20 +76,24 @@ router.get('/select_repos', ensureAuthenticated, function(req, res) {
   .get("https://api.github.com/" + api_route + "/repos")
   // .set('Accept', 'application/vnd.github.moondragon+json')
   .set('Authorization', 'token ' + req.user.token)
-  .end(function(err, repos) {
+  .end(function(err, github_repos) {
 
     if (err) return res.set(500).json({ message: err });
 
-    // Repo
-    // .where({ owner: req.query.owner || req.user.username })
-    // .find(function(err, repos) {
-    //
-    // });
+    Repo
+    .where({ sync: true, owner: req.query.owner || req.user.username })
+    .find(function(err, db_repos) {
 
-    return res.json({
-      auth: true,
-      repos: repos.body
+      if (err) return res.set(500).json({ message: err });
+
+      return res.json({
+        auth: true,
+        repos: github_repos.body,
+        synced_repos: db_repos
+      });
+
     });
+
   });
 
 });
@@ -77,6 +101,8 @@ router.get('/select_repos', ensureAuthenticated, function(req, res) {
 
 
 router.post('/add_repo', ensureAuthenticated, function(req, res) {
+
+  console.log(req.user.token);
 
   if (! req.body.owner) return res.set(500).json({ message: 'オーナーまたはチーム名がありません' });
   if (! req.body.repo)  return res.set(500).json({ message: 'レポジトリ名がありません' });
@@ -95,8 +121,8 @@ router.post('/add_repo', ensureAuthenticated, function(req, res) {
     { upsert: true },
     function(err, raw) {
       if (err) { res.set(500).json({ message: err }); }
-    
-      parser.enqueueRepo('token', repository , function (err) {
+
+      parser.enqueueRepo(req.user.token, repository , function (err) {
         if (err) {
           console.error(err);
           return res.set(500).json({message: err});

@@ -1,7 +1,7 @@
 var request = require('superagent');
 
 module.exports = {
-  template: '#select_repos_component',
+  template: '#repos_component',
   methods: {
     getRepositories: function(owner) {
       var _this = this;
@@ -19,7 +19,12 @@ module.exports = {
   },
   ready: function() {
 
-    console.log('repos compoennt');
+    var _this = this;
+
+    this.$on('get repositories', function(owner) {
+      console.log('catch event');
+      _this.getRepositories(owner);
+    });
 
     this.getRepositories(null);
 

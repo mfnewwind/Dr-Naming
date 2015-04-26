@@ -16,7 +16,7 @@ module.exports = {
         }
       );
     },
-    addRepository: function(owner, repo) {
+    addRepository: function(owner, repo, callback) {
       var _this = this;
       request
         .post('/siteapi/add_repo')
@@ -28,20 +28,29 @@ module.exports = {
         .end(function(err, res) {
           if (err)  { return console.log('add error: ', err); }
 
-          console.log(res);
+          return callback();
         }
       );
     },
     onCheckboxClicked: function(e, owner, repo) {
       e.$event.preventDefault();
 
-      this.addRepository(owner, repo);
+      this.addRepository(owner, repo, function() {
+
+      });
 
     }
   },
   ready: function() {
 
     console.log('repos compoennt');
+
+    var self = this;
+
+    this.$on('get repositories', function(owner) {
+      console.log('get get');
+      self.getRepositories(owner);
+    });
 
     this.getRepositories(null);
 

@@ -15,9 +15,18 @@ window.doctorNaming = new Vue({
       github: {},
       orgs: {}
     },
-    repos: {}
+    repos: {},
+    urls: {
+      orgs: '/siteapi/orgs',
+      repos: '/siteapi/repos',
+      select_repos: '/siteapi/select_repos'
+    }
   },
   methods: {},
   ready: function() {
+    var self = this;
+    this.$on('get repositories', function(owner) {
+      self.$broadcast('get repositories', [owner]);
+    });
   }
 });

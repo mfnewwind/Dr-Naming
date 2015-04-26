@@ -2,10 +2,10 @@ div.table-line(v-repeat='repos')
   div.table-item.number.center
     span {{$index + 1}}
   div.table-item.width180
-    span {{repos[$index].name}}
+    span {{repos[$index].repo_name}}
   div.table-item.width180
     span {{repos[$index].owner.login}}
-  div.table-item.width180
+  div.table-item.width140
     span Update Date
   div.table-item.center.width60
     i.fa.fa-check.icon

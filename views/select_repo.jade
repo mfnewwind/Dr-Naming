@@ -9,13 +9,13 @@ block content
       div.app-title
         span.font26px Add new repositories
       div.app-container.repositories
-        div.app-left(v-component='teams' v-with='avatar')
+        div.app-left(v-component='teams' v-with='avatar' data='select_repos')
         include ./teams.jade
         div.app-right(v-component='select_repos' v-with='repos : repos')
         script#select_repos_component(type='x-template')
           div.select-repository
             div.location-title
-              span.highlight mf-new-wind
+              span.highlight {{repos[0].owner.login}}
               i.fa.fa-angle-right
               span Select repository
               div.right-btn

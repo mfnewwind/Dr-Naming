@@ -8,12 +8,17 @@ var fileSchema = new mongoose.Schema({
   path: String,
   url: String,
   status: String,
-  result: mongoose.Schema.Types.Mixed
+  result: mongoose.Schema.Types.Mixed,
+  _id: false
 });
 
 var branchSchema = new mongoose.Schema({
-  branch_name: String,
-  files: [ fileSchema ]
+  branch_name: {
+    type: String,
+    defalut: 'master'
+  },
+  files: [ fileSchema ],
+  _id: false
 });
 
 var repoSchema = new mongoose.Schema({

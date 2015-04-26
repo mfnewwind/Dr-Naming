@@ -1,7 +1,7 @@
 script#teams_component(type='x-template')
   div.team-type
     span.font16px 個人
-  div.team(v-on='click: tabTeam()')
+  div.team(v-on='click: tabTeam(null)')
     div.team-content
       span.font18px {{github.user_name}}
       span.font12px Repositories 12

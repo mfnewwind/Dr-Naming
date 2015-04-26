@@ -9,7 +9,7 @@ block content
       div.app-title
         span.font26px Add new repositories
       div.app-container
-        div.app-left(v-component='teams' v-with='avatar')
+        div.app-left(v-component='teams' v-with='avatar, route: urls.select_repos')
         include ./teams.jade
         div.app-right(v-component='select_repos' v-with='repos : repos')
         script#select_repos_component(type='x-template')
