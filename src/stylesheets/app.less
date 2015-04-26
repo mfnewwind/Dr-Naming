@@ -56,9 +56,13 @@
   .team-content{
     float: left;
     width: 100%;
+    height: 60px;
+    overflow: hidden;
     padding: 10px 0px 0px 75px;
     span {
       display: block;
+      width: 160px;
+      overflow: hidden;
     }
   }
   .arrow {
@@ -87,8 +91,18 @@
 }
 
 // user.jade と select-repo.jade
+.app-container.repositories {
+  overflow: hidden;
+  .app-left {
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+    border-right: 1px solid @color-gray-200;
+  }
+}
 .select-repository {
   border-left: 1px solid @color-gray-200;
+  width: 691px;
+  margin-left: -1px;
   .table {
     min-height: 460px;
   }

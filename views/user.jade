@@ -5,7 +5,7 @@ block content
     div.site-container
       div.app-title
         span.font26px Select repository
-      div.app-container
+      div.app-container.repositories
         div.app-left(v-component='teams' v-with='avatar')
         include ./teams.jade
         div.app-right(v-component='select_repos' v-with='repos : repos')

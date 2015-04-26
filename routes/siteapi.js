@@ -30,7 +30,7 @@ router.get('/orgs', ensureAuthenticated, function(req, res) {
   .set('Authorization', 'token ' + req.user.token)
   .end(function(err, orgs) {
 
-    if (err) throw err;
+    if (err) return res.set(500).json({ message: err });
 
     res.json({
       auth: true,
