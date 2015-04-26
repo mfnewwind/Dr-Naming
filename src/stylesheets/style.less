@@ -52,6 +52,9 @@
   font-weight: 100;
   color: @color-white;
   text-align: center;
+  &:hover {
+    background-color: @color-blue-light-300;
+  }
 }
 .btn-base.github {
   width: 94px;
@@ -59,13 +62,16 @@
   box-shadow: 0 2px 0 0 @color-gray-800;
   -moz-box-shadow: 0 2px 0 0 @color-gray-800;
   -webkit-box-shadow: 0 2px 0 0 @color-gray-800;
+  &:hover {
+    background-color: @color-gray-500;
+  }
 }
 .btn.github-login {
   padding: 18px 30px;
   background-color: @color-blue-light-600;
-  box-shadow: 0 2px 0 0 rgba(0,0,0,0.6);
-  -moz-box-shadow: 0 2px 0 0 rgba(0,0,0,0.6);
-  -webkit-box-shadow: 0 2px 0 0 rgba(0,0,0,0.6);
+  box-shadow: 0 2px 0 0 @color-blue-light-800;
+  -moz-box-shadow: 0 2px 0 0 @color-blue-light-800;
+  -webkit-box-shadow: 0 2px 0 0 @color-blue-light-800;
   line-height: 60px;
   font-size: 24px;
   font-weight: 100;
@@ -73,6 +79,9 @@
   text-align: center;
   i, span {
     margin: 0px 5px;
+  }
+  &:hover {
+    background-color: @color-blue-light-300;
   }
 }  
 .btn.page-top {
@@ -87,6 +96,9 @@
   color: @color-white;
   font-size: 28px;
   box-shadow: 0px 5px 4px 0px rgba(0,0,0,0.4);
+  &:hover {
+    background-color: @color-blue-light-300;
+  }
 }
 
 //checkbox
