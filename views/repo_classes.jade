@@ -1,67 +1,45 @@
-div.table-line-title
-  div.table-item.number.center
-    span #
-  div.table-item.width180
-    span Name
-  div.table-item.width100.center
-    span Frequency
-  div.table-item.width100.center
-    span Meaning
-div.table-line
-  div.table-item.number.center
-    span 1
-  div.table-item.width180.highlight
-    span add
-  div.table-item.width100.center
-    span 30
-  div.table-item.width100.center
-    span 追加
-  div.table-item.arrow
-    i.fa.fa-angle-down.icon
-div.table-line.selected
-  div.table-item.number.center
-    span 2
-  div.table-item.width180.highlight
-    span hoge 
-  div.table-item.width100.center
-    span 30
-  div.table-item.width100.center
-    span 追加
-  div.table-item.arrow
-    i.fa.fa-angle-up.icon
+extends layout
 
-div.table-line-title
-  div.table-item.width40
-  div.table-item.number.center
-    span #
-  div.table-item.width180
-    span location 
-  div.table-item.width100
-    span Class
-  div.table-item.width500
-    span Comment
-  div.table-item.width80
-div.table-line
-  div.table-item.width40
-  div.table-item.number.center
-    span 1
-  div.table-item.width180
-    span location/location1 
-  div.table-item.width100
-    span class
-  div.table-item.width500
-    span comment
-  div.table-item.width80.highlight
-    a Code View
-div.table-line
-  div.table-item.width40
-  div.table-item.number.center
-    span 2
-  div.table-item.width180
-    span location/location2 
-  div.table-item.width100
-    span class
-  div.table-item.width500
-    span comment
-  div.table-item.width80.highlight
-    a Code View
+block content
+  section.app-wrapper
+    div.site-container
+      div.location-contents
+        div.title
+          span.team mf-new-wind
+          i.fa.fa-angle-right
+          span.repository android-fm
+      div.app-container
+        div.tab-menu
+          ul
+            li
+              a(href='/repo/user/repo/variables') Variable Names
+            li
+              a(href='/repo/user/repo/functions') Function Names
+            li.selected
+              a(href='/repo/user/repo/classes') Class Names
+            li
+              a(href='/repo/user/repo/codeview') Code View
+        div#repo
+          div.table-line-title
+            div.table-item.number.center
+              span #
+            div.table-item.width180
+              span Name
+            div.table-item.width180
+              span location
+            div.table-item.width100
+              span Meaning
+            div.table-item.width280
+              span Comment
+          include ./test_table_classes.jade
+  script(type="text/javascript").
+    function select_table_line(_this) {
+      if(_this.className.match('selected')){
+        _this.className='table-line';
+        _this.getElementsByTagName('i')[0].className='fa fa-angle-down icon';
+      }
+      else{
+        _this.className='table-line selected';
+        _this.getElementsByTagName('i')[0].className='fa fa-angle-up icon';
+      }
+    }

@@ -39,7 +39,23 @@ router.get('/repo/:user', function(req, res){
 
 // プロジェクトページ (変数, 関数, クラス一覧, コードビュー)
 router.get('/repo/:user/:repo', function(req, res){
-  res.render('repo', {});
+  res.render('repo_variables', {});
+});
+// 変数一覧
+router.get('/repo/:user/:repo/variables', function(req, res){
+  res.render('repo_variables', {});
+});
+// 関数一覧
+router.get('/repo/:user/:repo/functions', function(req, res){
+  res.render('repo_functions', {});
+});
+// クラス一覧
+router.get('/repo/:user/:repo/classes', function(req, res){
+  res.render('repo_classes', {});
+});
+//コードレビュー
+router.get('/repo/:user/:repo/codeview', function(req, res){
+  res.render('document_codeview', {});
 });
 
 
