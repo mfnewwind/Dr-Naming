@@ -54,7 +54,7 @@ router.get('/repos', ensureAuthenticated, function(req, res) {
 
   Repo
   .find({ sync: true, owner: req.query.owner || req.user.username })
-  .select('-_id repo_name owner sync branches')
+  .select('-_id repo_name repo owner sync branches')
   .exec(function(err, repos) {
 
     if (err) return res.set(500).json({ message: err });
@@ -102,8 +102,6 @@ router.get('/select_repos', ensureAuthenticated, function(req, res) {
 
 router.post('/add_repo', ensureAuthenticated, function(req, res) {
 
-  console.log(req.user.token);
-
   if (! req.body.owner) return res.set(500).json({ message: 'オーナーまたはチーム名がありません' });
   if (! req.body.repo)  return res.set(500).json({ message: 'レポジトリ名がありません' });
 
@@ -112,6 +110,7 @@ router.post('/add_repo', ensureAuthenticated, function(req, res) {
   Repo.update({ repo_name: repository },
     {
       repo_name: repository,
+      repo: req.body.repo,
       owner: req.body.owner,
       sync: true,
       branches: [

@@ -23,6 +23,7 @@ var branchSchema = new mongoose.Schema({
 
 var repoSchema = new mongoose.Schema({
   repo_name: String,
+  repo: String,
   owner: String,
   sync: {
     type: Boolean,
