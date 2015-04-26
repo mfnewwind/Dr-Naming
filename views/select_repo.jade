@@ -1,13 +1,13 @@
 extends layout
 
 block vars
-  - var subtitle = 'レポジトリ選択'
+  - var subtitle = 'レポジトリ追加'
 
 block content
   section.app-wrapper
     div.site-container
       div.app-title
-        span.font26px Add new repositories
+        span.font26px Add Repositories
       div.app-container.repositories
         div.app-left(v-component='teams' v-with='avatar' data='select_repos')
         include ./teams.jade
@@ -19,7 +19,7 @@ block content
               i.fa.fa-angle-right
               span Select repository
               div.right-btn
-                a.btn.btn-base(href='/select_repo') Select Repository
+                a.btn.btn-base(href='/select_repo') Your Repositories
             div.table
               div.table-line-title
                 div.table-item.number.center

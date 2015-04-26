@@ -15,8 +15,12 @@ script#header_component(type='x-template')
         ul.smart-list
           a.wrapper(href='/repo/{{github.user_name}}')
             li
-              i.fa.fa-github-square.icon
-              span Repositories
+              i.fa.fa-list.icon
+              span Your Repositories
+          a.wrapper(href='/select_repo')
+            li
+              i.fa.fa-check-square-o.icon
+              span Add Repositories
           a.wrapper(href='/logout')
             li
               i.fa.fa-sign-out.icon
