@@ -8,7 +8,6 @@
 
 header {
 
-  height: 160px;
   min-width: @size-site-width;
   background-color: @color-blue-light-600;
   border-bottom: 100px solid @color-blue-light-300;
@@ -58,7 +57,7 @@ header {
     position: absolute;
     top: 60px;
     right: 0;
-    width: 150px;
+    min-width: 150px;
     text-align: left;
     z-index: 100;
     .projection {
@@ -90,6 +89,7 @@ header {
         border-bottom: none;
       }
       span {
+        padding-right: 15px;
         color: @color-text-light;
         line-height: 30px;
         font-size: 14px;
@@ -97,9 +97,12 @@ header {
       .icon {
         position: relative;
         top: 2px;
-        margin: 0 10px 0 10px;
+        margin: 0 10px 0 15px;
         color: @color-blue-light-300;
         font-size: 20px;
+        .fa-list: {
+          font-size: 18px;
+        }
       }
     }
   }
