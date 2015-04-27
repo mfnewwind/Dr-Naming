@@ -28,5 +28,13 @@ window.doctorNaming = new Vue({
     this.$on('get repositories', function(owner) {
       self.$broadcast('get repositories', [owner]);
     });
+  },
+  filters: {
+    date: function (str) {
+      var d = new Date(str);
+      return d.getFullYear() + '/' +
+        ('0' + d.getMonth()).slice(-2) + '/' +
+        ('0' + d.getDay()).slice(-2);
+    }
   }
 });

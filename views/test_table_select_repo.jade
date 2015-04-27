@@ -6,7 +6,7 @@ div.table-line(v-repeat='repos')
   div.table-item.width180
     span {{repos[$index].owner.login}}
   div.table-item.width140
-    span Update Date
+    span {{repos[$index].updated_at |date}}
   div.table-item.width20
     input(type="checkbox",id="sb-{{$index + 1}}").css-checkbox
     label(for="sb-{{$index + 1}}" v-on='click: onCheckboxClicked(this, repos[$index].owner.login, repos[$index].name)').css-label
