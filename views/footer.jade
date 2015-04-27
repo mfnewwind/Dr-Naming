@@ -1,5 +1,5 @@
 footer
-  div.btn.page-top
+  a.btn.page-top(onclick="back_top()")
     i.fa.fa-angle-up
   div.site-container.h-box
     a.wrapper.line(href='http://www.mobilefactory.jp/' target='_blank')
@@ -12,3 +12,10 @@ footer
       span.sitemap 利用規約
     p.wrapper.line
       small &copy; 2015 Mobile Factory All Rights Reserved.
+script.
+    function back_top() {
+      if (Math.max(document.documentElement.scrollTop, document.body.scrollTop) > 0) {
+        window.scrollBy(0,-30); 
+        scrolldelay = setTimeout('back_top()',10); 
+      }
+    }
