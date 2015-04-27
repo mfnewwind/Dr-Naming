@@ -35,7 +35,7 @@ window.doctorNaming = new Vue({
     date: function (str) {
       var d = new Date(str);
       return d.getFullYear() + '/' +
-        ('0' + d.getMonth()).slice(-2) + '/' +
+        ('0' + (d.getMonth() + 1)).slice(-2) + '/' +
         ('0' + d.getDay()).slice(-2);
     }
   }
