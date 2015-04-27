@@ -99,6 +99,20 @@ router.get('/select_repos', ensureAuthenticated, function(req, res) {
 });
 
 
+router.get('/repo', ensureAuthenticated, function(req, res) {
+
+
+  Repo
+  .where({ sync: true, owner: req.query.owner, repo: req.query.repo })
+  .select('-_id')
+  .findOne(function(err, db_repo) {
+    res.json({
+      auth: true,
+      db_repo: db_repo
+    });
+  });
+
+});
 
 router.post('/add_repo', ensureAuthenticated, function(req, res) {
 

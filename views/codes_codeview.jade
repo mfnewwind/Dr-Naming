@@ -1,0 +1,110 @@
+div.file-list-contents
+  div.title
+    span #{repo}
+  div.file-list
+    ul
+      li
+        i.fa.fa-file-code-o
+        span bin/hoge/hoge1.js
+        i.fa.fa-angle-right
+      li
+        i.fa.fa-file-code-o
+        span bin/hoge/hoge2.js
+        i.fa.fa-angle-right
+      li
+        i.fa.fa-file-code-o
+        span src/hoge/hoge1.js
+        i.fa.fa-angle-right
+      li
+        i.fa.fa-file-code-o
+        span test/hoge/hoge2.js
+        i.fa.fa-angle-right
+div.right-contents
+  div.file-location-contents
+    div.file-location
+      span.repository #{repo}
+      i.fa.fa-angle-right
+      span.directory bin
+      i.fa.fa-angle-right
+      span.directory hoge
+      i.fa.fa-angle-right
+      span.current hoge1.js
+  div.file-details
+    span.detail Excecutable File
+    span.detail 93 lines
+    span.detail (72 sloc)
+    span.detail 1.629 kb
+  div.search-box
+  div.codeview-contents
+    //- div.shadow
+    // ライブラリで書き出した後のイメージ
+    table
+      tr
+        th.inset-shadow(colspan="2")
+      tr
+        td.line.width60 1
+        td.code
+          span var 
+          span.variable app 
+            nav.name-detail
+              table
+                tr.header
+                  td.width60
+                    span.name app
+                  td
+                    span.type Variable
+                tr.tag
+                  td.width60
+                    span.title Tag
+                  td
+                    span.tag hoge1
+                    span , 
+                    span.tag hoge2
+                    span , 
+                    span.tag hoge3
+                tr.description
+                  td.width60
+                    span.title Description
+                    a.btn.edit
+                      i.fa.fa-pencil-square-o
+                      span Edit
+                  td
+                    span hgheogheohgoehgoehgohogehogehogehoghehogehogheogheohgoehgoehgoeheoh
+                tr.frequency
+                  td.width60
+                    span.title Frequency
+                  td
+                    span 24
+              div.projection
+          span = require('../app');
+      tr
+        td.line.width60 2
+        td.code
+          span //hugaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      tr
+        td.line.width60 3
+        td.code
+          span function 
+          span.function hoge
+          span () {}
+      tr
+        td.line.width60 4
+        td.code
+      tr
+        td.line.width60 5
+        td.code
+      tr
+        td.line.width60 6
+        td.code
+      tr
+        td.line.width60 7
+        td.code
+          span var 
+          span.variable fuga 
+          span = 0;
+      tr
+        td.line.width60 8
+        td.code
+      tr
+        td.line.width60 9
+        td.code

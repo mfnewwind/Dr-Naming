@@ -1,0 +1,42 @@
+extends layout
+
+block vars
+  - var subtitle = 'コードドキュメント'
+
+block content
+  section.app-wrapper(v-component='repo_app' owner='#{owner}' repo='#{repo}')
+  script#repo_app_component(type='x-template')
+    div.site-container
+      div.location-contents
+        div.title
+          span.team #{owner}
+          i.fa.fa-angle-right
+          span.repository #{repo}
+      div.app-container
+        div.tab-menu
+          ul
+            li.selected(v-on='click: switchTab("variables")') Variable Names
+            li(v-on='click: switchTab("functions")') Function Names
+            li(v-on='click: switchTab("classes")') Class Names
+            li(v-on='click: switchTab("codeview")') Code View
+        div#repo_codes(v-component='{{app.component}}' v-with='collections : collections')
+  script#codes_variables_component(type='x-template')
+    include ./codes_variables.jade
+  script#codes_functions_component(type='x-template')
+    include ./codes_functions.jade
+  script#codes_classes_component(type='x-template')
+    include ./codes_classes.jade
+  script#codes_codeview_component(type='x-template')
+    include ./codes_codeview.jade
+          
+  script(type="text/javascript").
+    function select_table_line(_this) {
+      if(_this.className.match('selected')){
+        _this.className='table-line';
+        _this.getElementsByTagName('i')[0].className='fa fa-angle-down icon';
+      }
+      else{
+        _this.className='table-line selected';
+        _this.getElementsByTagName('i')[0].className='fa fa-angle-up icon';
+      }
+    }

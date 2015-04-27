@@ -8,6 +8,7 @@ window.doctorNaming = new Vue({
     teams: require('./teams'),
     repos: require('./repos'),
     select_repos: require('./select_repos'),
+    repo_app: require('./repo_app')
   },
   data: {
     title: 'DoctorNaming',
@@ -15,6 +16,7 @@ window.doctorNaming = new Vue({
       github: {},
       orgs: {}
     },
+    repo: {},
     repos: {},
     urls: {
       orgs: '/siteapi/orgs',

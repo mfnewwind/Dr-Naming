@@ -39,7 +39,10 @@ router.get('/repo/:user', function(req, res){
 
 // プロジェクトページ (変数, 関数, クラス一覧, コードビュー)
 router.get('/repo/:user/:repo', function(req, res){
-  res.render('repo_variables', {});
+  res.render('repo_code', {
+    owner: req.params.user,
+    repo: req.params.repo
+  });
 });
 // 変数一覧
 router.get('/repo/:user/:repo/variables', function(req, res){
