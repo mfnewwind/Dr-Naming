@@ -33,7 +33,7 @@ module.exports = {
       );
     },
     onCheckboxClicked: function(e, owner, repo) {
-      e.$event.preventDefault();
+      //e.$event.preventDefault();
 
       this.addRepository(owner, repo, function() {
 
