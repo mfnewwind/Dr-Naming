@@ -43,7 +43,7 @@ div.table-line(v-repeat='v : collections.variables')
         span(v-if='comment') {{comment}}
         input(v-if='!comment')
       div.table-item.width80.highlight
-        a Code View
+        a(v-on='click: switchTab("codeview")') Code View
     //-     
     //- div.table-line
     //-   div.table-item.width40
