@@ -3,6 +3,11 @@ var _ = require('lodash');
 
 module.exports = {
   template: '#repos_component',
+  computed: {
+    now: function () {
+      return new Date().toUTCString();
+    }
+  },
   filters: {
     statusCheck: function(files) {
 
