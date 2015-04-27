@@ -3,7 +3,7 @@ div.table-line-title
     span #
   div.table-item.width180
     span Name
-  div.table-item.width100.center(v-click='sort("Frequency")')
+  div.table-item.width100.center(v-on='click: sort("frequency")')
     span Frequency
   div.table-item.width100.center
     span Meaning
@@ -40,7 +40,8 @@ div.table-line(v-repeat='v : collections.variables')
       div.table-item.width100
         span {{class_name}}
       div.table-item.width500
-        span {{comment}}
+        span(v-if='comment') {{comment}}
+        input(v-if='!comment')
       div.table-item.width80.highlight
         a Code View
     //-     

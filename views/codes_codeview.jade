@@ -3,32 +3,16 @@ div.file-list-contents
     span #{repo}
   div.file-list
     ul
-      li
+      li(v-repeat='files')
         i.fa.fa-file-code-o
-        span bin/hoge/hoge1.js
-        i.fa.fa-angle-right
-      li
-        i.fa.fa-file-code-o
-        span bin/hoge/hoge2.js
-        i.fa.fa-angle-right
-      li
-        i.fa.fa-file-code-o
-        span src/hoge/hoge1.js
-        i.fa.fa-angle-right
-      li
-        i.fa.fa-file-code-o
-        span test/hoge/hoge2.js
+        span {{path}}
         i.fa.fa-angle-right
 div.right-contents
   div.file-location-contents
     div.file-location
       span.repository #{repo}
       i.fa.fa-angle-right
-      span.directory bin
-      i.fa.fa-angle-right
-      span.directory hoge
-      i.fa.fa-angle-right
-      span.current hoge1.js
+      span.directory {{path}}
   div.file-details
     span.detail Excecutable File
     span.detail 93 lines

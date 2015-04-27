@@ -23,7 +23,11 @@ module.exports = {
       app: {
         component: 'variables'
       },
-      codes: null,
+      codes: {
+        branches: [
+          {files: []}
+        ]
+      },
       collections: {
         variables: {},
         functions: {},
@@ -56,8 +60,6 @@ module.exports = {
       });
     },
     compile: function(codes) {
-
-      console.log(codes.branches[0]);
 
       var _this = this;
       _.forEach(codes.branches[0].files, function(file) {

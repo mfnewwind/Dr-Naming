@@ -19,7 +19,7 @@ block content
             li(v-on='click: switchTab("functions")') Function Names
             li(v-on='click: switchTab("classes")') Class Names
             li(v-on='click: switchTab("codeview")') Code View
-        div#repo_codes(v-component='{{app.component}}' v-with='collections : collections')
+        div#repo_codes(v-component='{{app.component}}' v-with='collections : collections, files : codes.branches[0].files')
   script#codes_variables_component(type='x-template')
     include ./codes_variables.jade
   script#codes_functions_component(type='x-template')
