@@ -21,7 +21,7 @@ module.exports = {
   data: function() {
     return {
       app: {
-        component: 'variables'
+        component: ''
       },
       codes: {
         branches: [
@@ -94,6 +94,8 @@ module.exports = {
           }
         });
       });
+
+      this.app.component = 'variables';
     },
     sort: function(col_name) {
 
