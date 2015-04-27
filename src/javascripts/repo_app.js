@@ -57,6 +57,8 @@ module.exports = {
     },
     compile: function(codes) {
 
+      console.log(codes);
+
       var _this = this;
       _.forEach(codes.branches[0].files, function(file) {
         _.forEach(file.result, function(result) {
@@ -87,6 +89,9 @@ module.exports = {
           }
         });
       });
+    },
+    sort: function(col_name) {
+      
     }
   },
   ready: function() {
