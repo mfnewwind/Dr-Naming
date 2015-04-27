@@ -26,12 +26,11 @@ section {
           list-style-type: none;
           color: @color-gray-600;
           padding-left: 15px;
-
-          &:hover {
-            background-color: @color-gray-200;
-            i.fa.fa-angle-right {
-              visibility: visible;
-            }
+        }
+        li:hover, li.selected {
+          background-color: @color-gray-200;
+          i.fa.fa-angle-right {
+            visibility: visible;
           }
         }
         i.fa.fa-file-code-o {
@@ -89,6 +88,7 @@ section {
         overflow-y: visible;
 
         table {
+          width: 100%;
           position: relative;
           border: 0;
           line-height: 20px;

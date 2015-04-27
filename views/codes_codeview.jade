@@ -5,14 +5,60 @@ div.file-list-contents
     ul
       li(v-repeat='files')
         i.fa.fa-file-code-o
-        span {{path}}
+        span View/gameView.js
+        i.fa.fa-angle-right
+      li
+        i.fa.fa-file-code-o
+        span Controller/charactor.js
+        i.fa.fa-angle-right
+      li.selected
+        i.fa.fa-file-code-o
+        span Controller/mainView.js
+        i.fa.fa-angle-right
+      li
+        i.fa.fa-file-code-o
+        span Model/character/muse.js
+        i.fa.fa-angle-right
+      li
+        i.fa.fa-file-code-o
+        span Model/character/rin.js
+        i.fa.fa-angle-right
+      li
+        i.fa.fa-file-code-o
+        span Model/character/niko.js
+        i.fa.fa-angle-right
+      li
+        i.fa.fa-file-code-o
+        span Model/character/eri.js
+        i.fa.fa-angle-right
+      li
+        i.fa.fa-file-code-o
+        span Model/character/hanayo.js
+        i.fa.fa-angle-right
+      li
+        i.fa.fa-file-code-o
+        span Model/character/ui.js
+        i.fa.fa-angle-right
+      li
+        i.fa.fa-file-code-o
+        span Model/character/maki.js
+        i.fa.fa-angle-right
+      li
+        i.fa.fa-file-code-o
+        span Model/character/honoka.js
+        i.fa.fa-angle-right
+      li
+        i.fa.fa-file-code-o
+        span Model/character/kotori.js
         i.fa.fa-angle-right
 div.right-contents
   div.file-location-contents
     div.file-location
       span.repository #{repo}
       i.fa.fa-angle-right
-      span.directory {{path}}
+      span.directory Controller
+      i.fa.fa-angle-right
+      span.current mainView.js
   div.file-details
     span.detail Excecutable File
     span.detail 93 lines
@@ -21,7 +67,708 @@ div.right-contents
   div.search-box
   div.codeview-contents
     div.shadow
-    // ライブラリで書き出した後のイメージ
-    <pre>
-    
-    </pre>
+      table
+              tr
+                th.inset-shadow(colspan="2")
+              tr
+                td.line.width60 1
+                td.code
+                  span 
+              tr
+                td.line.width60 2
+                td.code
+                  span 
+              tr
+                td.line.width60 3
+                td.code
+                  span // これから作ります
+              tr
+                td.line.width60 4
+                td.code
+                  span var 
+                  span.variable test
+                    nav.name-detail
+                      table
+                        tr.header
+                          td.width60
+                            span.name test
+                          td
+                            span.type Variable
+                        tr.tag
+                          td.width60
+                            span.title Tag
+                          td
+                            span.tag hoge1
+                            span ,
+                            span.tag hoge2
+                            span ,
+                            span.tag hoge3
+                        tr.description
+                          td.width60
+                            span.title Description
+                            a.btn.edit
+                              i.fa.fa-pencil-square-o
+                              span Edit
+                          td
+                            span これから作ります
+                        tr.frequency
+                          td.width60
+                            span.title Frequency
+                          td
+                            span 24
+                      div.projection
+                  span ;
+              tr
+                td.line.width60 5
+                td.code
+                  span 
+              tr
+                td.line.width60 6
+                td.code
+                  span // ログは汎用的に使わないで、できるだけ専用のログの変数をつくる。
+              tr
+                td.line.width60 7
+                td.code
+                  span var 
+                  span.variable log
+                    nav.name-detail
+                      table
+                        tr.header
+                          td.width60
+                            span.name log 
+                          td
+                            span.type Variable
+                        tr.tag
+                          td.width60
+                            span.title Tag
+                          td
+                            span.tag hoge1
+                            span ,
+                            span.tag hoge2
+                            span ,
+                            span.tag hoge3
+                        tr.description
+                          td.width60
+                            span.title Description
+                            a.btn.edit
+                              i.fa.fa-pencil-square-o
+                              span Edit
+                          td
+                            span ログは汎用的に使わないで、できるだけ専用のログの変数をつくる。
+                        tr.frequency
+                          td.width60
+                            span.title Frequency
+                          td
+                            span 24
+                      div.projection
+                  span ;
+              tr
+                td.line.width60 8
+                td.code
+                  span 
+              tr
+                td.line.width60 9
+                td.code
+                  span // メッセのログ
+              tr
+                td.line.width60 10
+                td.code
+                  span var 
+                  span.variable logMessage
+                    nav.name-detail
+                      table
+                        tr.header
+                          td.width60
+                            span.name logMessage
+                          td
+                            span.type Variable
+                        tr.tag
+                          td.width60
+                            span.title Tag
+                          td
+                            span.tag hoge1
+                            span ,
+                            span.tag hoge2
+                            span ,
+                            span.tag hoge3
+                        tr.description
+                          td.width60
+                            span.title Description
+                            a.btn.edit
+                              i.fa.fa-pencil-square-o
+                              span Edit
+                          td
+                            span メッセのログ
+                        tr.frequency
+                          td.width60
+                            span.title Frequency
+                          td
+                            span 24
+                      div.projection
+                  span ;
+              tr
+                td.line.width60 11
+                td.code
+                  span 
+              tr
+                td.line.width60 12
+                td.code
+                  span // キャラ名のログ
+              tr
+                td.line.width60 13
+                td.code
+                  span var 
+                  span.variable logCharactorName
+                    nav.name-detail
+                      table
+                        tr.header
+                          td.width60
+                            span.name logCharactorName
+                          td
+                            span.type Variable
+                        tr.tag
+                          td.width60
+                            span.title Tag
+                          td
+                            span.tag hoge1
+                            span ,
+                            span.tag hoge2
+                            span ,
+                            span.tag hoge3
+                        tr.description
+                          td.width60
+                            span.title Description
+                            a.btn.edit
+                              i.fa.fa-pencil-square-o
+                              span Edit
+                          td
+                            span キャラ名のログ
+                        tr.frequency
+                          td.width60
+                            span.title Frequency
+                          td
+                            span 24
+                      div.projection
+                  span ;
+              tr
+                td.line.width60 14
+                td.code
+                  span 
+              tr
+                td.line.width60 15
+                td.code
+                  span // 状態のログ
+              tr
+                td.line.width60 16
+                td.code
+                  span var 
+                  span.variable logStatus
+                    nav.name-detail
+                      table
+                        tr.header
+                          td.width60
+                            span.name logStatus
+                          td
+                            span.type Variable
+                        tr.tag
+                          td.width60
+                            span.title Tag
+                          td
+                            span.tag hoge1
+                            span ,
+                            span.tag hoge2
+                            span ,
+                            span.tag hoge3
+                        tr.description
+                          td.width60
+                            span.title Description
+                            a.btn.edit
+                              i.fa.fa-pencil-square-o
+                              span Edit
+                          td
+                            span 状態のログ
+                        tr.frequency
+                          td.width60
+                            span.title Frequency
+                          td
+                            span 24
+                      div.projection
+                  span ;
+              tr
+                td.line.width60 17
+                td.code
+                  span 
+              tr
+                td.line.width60 18
+                td.code
+                  span // フラグのろぐ
+              tr
+                td.line.width60 19
+                td.code
+                  span var 
+                  span.variable logFlag
+                    nav.name-detail
+                      table
+                        tr.header
+                          td.width60
+                            span.name logFlag
+                          td
+                            span.type Variable
+                        tr.tag
+                          td.width60
+                            span.title Tag
+                          td
+                            span.tag hoge1
+                            span ,
+                            span.tag hoge2
+                            span ,
+                            span.tag hoge3
+                        tr.description
+                          td.width60
+                            span.title Description
+                            a.btn.edit
+                              i.fa.fa-pencil-square-o
+                              span Edit
+                          td
+                            span フラグのろぐ
+                        tr.frequency
+                          td.width60
+                            span.title Frequency
+                          td
+                            span 24
+                      div.projection
+                  span ;
+              tr
+                td.line.width60 20
+                td.code
+                  span 
+              tr
+                td.line.width60 21
+                td.code
+                  span // データベースのkeyはスネークケースで書く
+              tr
+                td.line.width60 22
+                td.code
+                  span var 
+                  span.variable char_id
+                    nav.name-detail
+                      table
+                        tr.header
+                          td.width60
+                            span.name char_id
+                          td
+                            span.type Variable
+                        tr.tag
+                          td.width60
+                            span.title Tag
+                          td
+                            span.tag hoge1
+                            span ,
+                            span.tag hoge2
+                            span ,
+                            span.tag hoge3
+                        tr.description
+                          td.width60
+                            span.title Description
+                            a.btn.edit
+                              i.fa.fa-pencil-square-o
+                              span Edit
+                          td
+                            span データベースのkeyはスネークケースで書く
+                        tr.frequency
+                          td.width60
+                            span.title Frequency
+                          td
+                            span 24
+                      div.projection
+                  span ;
+              tr
+                td.line.width60 23
+                td.code
+                  span 
+              tr
+                td.line.width60 24
+                td.code
+                  span var 
+                  span.variable dere_flag
+                    nav.name-detail
+                      table
+                        tr.header
+                          td.width60
+                            span.name dere_flag
+                          td
+                            span.type Variable
+                        tr.tag
+                          td.width60
+                            span.title Tag
+                          td
+                            span.tag hoge1
+                            span ,
+                            span.tag hoge2
+                            span ,
+                            span.tag hoge3
+                        tr.description
+                          td.width60
+                            span.title Description
+                            a.btn.edit
+                              i.fa.fa-pencil-square-o
+                              span Edit
+                          td
+                            span 
+                        tr.frequency
+                          td.width60
+                            span.title Frequency
+                          td
+                            span 24
+                      div.projection
+                  span ;
+              tr
+                td.line.width60 25
+                td.code
+                  span var 
+                  span.variable tsun_flag
+                    nav.name-detail
+                      table
+                        tr.header
+                          td.width60
+                            span.name tsun_flag
+                          td
+                            span.type Variable
+                        tr.tag
+                          td.width60
+                            span.title Tag
+                          td
+                            span.tag hoge1
+                            span ,
+                            span.tag hoge2
+                            span ,
+                            span.tag hoge3
+                        tr.description
+                          td.width60
+                            span.title Description
+                            a.btn.edit
+                              i.fa.fa-pencil-square-o
+                              span Edit
+                          td
+                            span 
+                        tr.frequency
+                          td.width60
+                            span.title Frequency
+                          td
+                            span 24
+                      div.projection
+                  span ;
+              tr
+                td.line.width60 26
+                td.code
+                  span var 
+                  span.variable tsun_dere_flag
+                    nav.name-detail
+                      table
+                        tr.header
+                          td.width60
+                            span.name tsun_dere_flag
+                          td
+                            span.type Variable
+                        tr.tag
+                          td.width60
+                            span.title Tag
+                          td
+                            span.tag hoge1
+                            span ,
+                            span.tag hoge2
+                            span ,
+                            span.tag hoge3
+                        tr.description
+                          td.width60
+                            span.title Description
+                            a.btn.edit
+                              i.fa.fa-pencil-square-o
+                              span Edit
+                          td
+                            span 
+                        tr.frequency
+                          td.width60
+                            span.title Frequency
+                          td
+                            span 24
+                      div.projection
+                  span ;
+              tr
+                td.line.width60 27
+                td.code
+                  span var 
+                  span.variable hoge_flag
+                    nav.name-detail
+                      table
+                        tr.header
+                          td.width60
+                            span.name hoge_flag
+                          td
+                            span.type Variable
+                        tr.tag
+                          td.width60
+                            span.title Tag
+                          td
+                            span.tag hoge1
+                            span ,
+                            span.tag hoge2
+                            span ,
+                            span.tag hoge3
+                        tr.description
+                          td.width60
+                            span.title Description
+                            a.btn.edit
+                              i.fa.fa-pencil-square-o
+                              span Edit
+                          td
+                            span 
+                        tr.frequency
+                          td.width60
+                            span.title Frequency
+                          td
+                            span 24
+                      div.projection
+                  span ;
+              tr
+                td.line.width60 28
+                td.code
+                  span var 
+                  span.variable char_status
+                    nav.name-detail
+                      table
+                        tr.header
+                          td.width60
+                            span.name char_status
+                          td
+                            span.type Variable
+                        tr.tag
+                          td.width60
+                            span.title Tag
+                          td
+                            span.tag hoge1
+                            span ,
+                            span.tag hoge2
+                            span ,
+                            span.tag hoge3
+                        tr.description
+                          td.width60
+                            span.title Description
+                            a.btn.edit
+                              i.fa.fa-pencil-square-o
+                              span Edit
+                          td
+                            span 
+                        tr.frequency
+                          td.width60
+                            span.title Frequency
+                          td
+                            span 24
+                      div.projection
+                  span ;
+              tr
+                td.line.width60 29
+                td.code
+                  span var 
+                  span.variable hoge_status
+                    nav.name-detail
+                      table
+                        tr.header
+                          td.width60
+                            span.name hoge_status
+                          td
+                            span.type Variable
+                        tr.tag
+                          td.width60
+                            span.title Tag
+                          td
+                            span.tag hoge1
+                            span ,
+                            span.tag hoge2
+                            span ,
+                            span.tag hoge3
+                        tr.description
+                          td.width60
+                            span.title Description
+                            a.btn.edit
+                              i.fa.fa-pencil-square-o
+                              span Edit
+                          td
+                            span // これから作ります
+                        tr.frequency
+                          td.width60
+                            span.title Frequency
+                          td
+                            span 24
+                      div.projection
+                  span ;
+              tr
+                td.line.width60 30
+                td.code
+                  span 
+              tr
+                td.line.width60 31
+                td.code
+                  span function 
+                  span.function logMessage 
+                    nav.name-detail
+                      table
+                        tr.header
+                          td.width60
+                            span.name logMessage
+                          td  
+                            span.type Function
+                        tr.tag
+                          td.width60
+                            span.title Tag 
+                          td  
+                            span.tag hoge1
+                            span ,
+                            span.tag hoge2
+                            span ,
+                            span.tag hoge3
+                        tr.description
+                          td.width60
+                            span.title Description
+                            a.btn.edit
+                              i.fa.fa-pencil-square-o
+                              span Edit
+                          td
+                            span 
+                        tr.frequency
+                          td.width60
+                            span.title Frequency
+                          td
+                            span 24
+                      div.projection
+                  span (argument) {
+              tr
+                td.line.width60 32
+                td.code
+                  span   // body...
+              tr
+                td.line.width60 33
+                td.code
+                  span }
+              tr
+                td.line.width60 34
+                td.code
+                  span 
+              tr
+                td.line.width60 35
+                td.code
+                  span function 
+                  span.function getLog 
+                    nav.name-detail
+                      table
+                        tr.header
+                          td.width60
+                            span.name getLog
+                          td
+                            span.type Function
+                        tr.tag
+                          td.width60
+                            span.title Tag
+                          td
+                            span.tag hoge1
+                            span ,
+                            span.tag hoge2
+                            span ,
+                            span.tag hoge3
+                        tr.description
+                          td.width60
+                            span.title Description
+                            a.btn.edit
+                              i.fa.fa-pencil-square-o
+                              span Edit
+                          td
+                            span
+                        tr.frequency
+                          td.width60
+                            span.title Frequency
+                          td
+                            span 24
+                      div.projection
+                  span (argument) {
+              tr
+                td.line.width60 36
+                td.code
+                  span  // body...
+              tr
+                td.line.width60 37
+                td.code
+                  span }
+              tr
+                td.line.width60 38
+                td.code
+                  span 
+              tr
+                td.line.width60 39
+                td.code
+                  span function 
+                  span.function getCharactorController 
+                    nav.name-detail
+                      table
+                        tr.header
+                          td.width60
+                            span.name getCharactorController
+                          td
+                            span.type Function
+                        tr.tag
+                          td.width60
+                            span.title Tag
+                          td
+                            span.tag hoge1
+                            span ,
+                            span.tag hoge2
+                            span ,
+                            span.tag hoge3
+                        tr.description
+                          td.width60
+                            span.title Description
+                            a.btn.edit
+                              i.fa.fa-pencil-square-o
+                              span Edit
+                          td
+                            span
+                        tr.frequency
+                          td.width60
+                            span.title Frequency
+                          td
+                            span 24
+                      div.projection
+                  span (argument) {
+              tr
+                td.line.width60 40
+                td.code
+                  span // body...
+              tr
+                td.line.width60 41
+                td.code
+                  span }
+              tr
+                td.line.width60 42
+                td.code
+                  span 
+
+              tr
+                td.line.width60 43
+                td.code
+                  span 
+
+              tr
+                td.line.width60 44
+                td.code
+                  span 
+
+              tr
+                td.line.width60 45
+                td.code
+                  span 
+
+              tr
+                td.line.width60 46
+                td.code
+                  span 
+
+
