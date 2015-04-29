@@ -8,7 +8,7 @@ script#header_component(type='x-template')
         img.logo(src='/images/header_logo.png')
     a.btn.btn-base.github(href='/auth/github' v-show='!github') Sign in
     div.avatar(v-if='github')
-      img.face(v-attr='src: github.avatar_url')
+      img.face(v-attr='src: github.avatar_url + "&s=45"')
       span.name {{github.display_name}}
       span.repo Repositories {{github.public_repos}}
       nav

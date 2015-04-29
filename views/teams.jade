@@ -6,7 +6,7 @@ script#teams_component(type='x-template')
       span.font18px {{github.user_name}}
       span.font12px Repositories 12
     div.team-icon
-      img(v-attr='src: github.avatar_url')
+      img(v-attr='src: github.avatar_url + "&s=45"')
     div.arrow
       i.fa.fa-angle-right.icon
   div.team-type 
@@ -16,7 +16,7 @@ script#teams_component(type='x-template')
       span.font18px {{orgs[$index].name}}
       span.font12px Repositories {{$index}}
     div.team-icon
-      img(v-attr='src: orgs[$index].avatar_url')
+      img(v-attr='src: orgs[$index].avatar_url + "&s=45"')
     div.arrow
       i.fa.fa-angle-right.icon
 //- div.team.selected
