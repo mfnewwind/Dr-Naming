@@ -44,28 +44,6 @@ router.get('/repo/:user/:repo', function(req, res){
     repo: req.params.repo
   });
 });
-// 変数一覧
-router.get('/repo/:user/:repo/variables', function(req, res){
-  res.render('repo_variables', {});
-});
-// 関数一覧
-router.get('/repo/:user/:repo/functions', function(req, res){
-  res.render('repo_functions', {});
-});
-// クラス一覧
-router.get('/repo/:user/:repo/classes', function(req, res){
-  res.render('repo_classes', {});
-});
-//コードレビュー
-router.get('/repo/:user/:repo/codeview', function(req, res){
-  res.render('document_codeview', {});
-});
-
-
-// コードレビューページ(確認用)　TODO:おかしかったら書き直して。
-router.get('/document_codeview', function(req, res){
-  res.render('document_codeview', {});
-});
 
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) { return next(); }
