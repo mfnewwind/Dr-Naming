@@ -9,7 +9,7 @@ module.exports = {
       template: '#codes_variables_component'
     },
     functions: {
-      tempalte: '#codes_functions_component'
+      template: '#codes_functions_component'
     },
     classes  : {
       template: '#codes_classes_component'
