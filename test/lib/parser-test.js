@@ -208,7 +208,7 @@ describe('Unit test for lib/parser.js', function () {
     var token = process.env.GITHUB_TOKEN;
 
     describe('mfnewwind/newwind', function () {
-      var repo_name = 'github.com/mfnewwind/newwind';
+      var repo_name = 'github.com/mfnewwind/Dr-Naming';
 
       it('should create repo', function (done) {
         Repo.remove({ repo_name: repo_name }, function (err) {
