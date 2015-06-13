@@ -1,7 +1,7 @@
 \#dn Dr. Naming
 ---------------
 
-[![Circle CI](https://circleci.com/gh/mfnewwind/newwind/tree/master.svg?style=svg)](https://circleci.com/gh/mfnewwind/newwind/tree/master)
+[![Circle CI](https://circleci.com/gh/mfnewwind/Dr-Naming/tree/master.svg?style=svg)](https://circleci.com/gh/mfnewwind/Dr-Naming/tree/master)
 
 これは、とても素晴らしいサービスになる予定です (たぶん)
 
