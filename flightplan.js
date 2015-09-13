@@ -8,6 +8,10 @@ plan.target('staging', {
 
 plan.remote(function (remote) {
   remote.with('cd ~/Dr-Naming', function () {
+    remote.log('Show system information');
+    remote.exec('echo Node $(node -v)');
+    remote.exec('perl -v');
+
     // git
     remote.log('Update files');
     remote.git('submodule init');
