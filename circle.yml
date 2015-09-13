@@ -17,6 +17,6 @@ deployment:
       appname: mfnewwind
 
   "staging.aws":
-    branch: issues/64
+    branch: master
     commands:
       - npm run deploy
