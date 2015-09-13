@@ -70,7 +70,7 @@ gulp.task('css', function () {
       cascade: false
     }))
     .pipe(concat('style.css'))
-    .pipe(minifyCSS())
+    .pipe(minifyCSS({ processImport: false }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./public/stylesheets'));
 });
