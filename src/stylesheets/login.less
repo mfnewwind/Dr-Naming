@@ -27,7 +27,7 @@ section {
   .center-contents {
     position: relative;
     background-color: @color-bg-white;
-    height: 300px;
+    height: 260px;
     font-family: Roboto;
 
     .contents {
@@ -35,11 +35,13 @@ section {
       width: @size-site-width;
       margin: 0 auto;
 
+      @space-top: 70px;
+
       .site-description {
         position: absolute;
         display: block;
         margin: 0;
-        top: 55px;
+        top: @space-top;
         left: 55px;
         font-size: 24px;
         color: @color-gray-800;
@@ -47,7 +49,7 @@ section {
 
       .github-contents {
         position: relative;
-        top: 55px;
+        top: @space-top;
         left: 600px;
         width: 300px;
         height: 60px;
@@ -101,7 +103,7 @@ section {
         }
         .logos {
           margin-top: 20px;
-          
+
           .logo {
           margin: 20px;
           }
