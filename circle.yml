@@ -20,4 +20,5 @@ deployment:
     branch: issues/64
     commands:
       - npm install -g flightplan
+      - npm install flightplan
       - fly staging
