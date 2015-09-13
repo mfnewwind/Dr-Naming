@@ -11,10 +11,10 @@ machine:
     - java -version
 
 deployment:
-  staging:
-    branch: master
-    heroku:
-      appname: mfnewwind
+  # staging:
+  #   branch: master
+  #   heroku:
+  #     appname: mfnewwind
 
   "staging.aws":
     branch: master
