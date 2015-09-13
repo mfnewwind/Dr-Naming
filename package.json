@@ -9,7 +9,8 @@
     "postinstall": "gulp build",
     "start": "node ./bin/www",
     "test": "mocha --colors --growl --bail --check-leaks --timeout 100000 test/**/*-test.js",
-    "dev": "node_modules/.bin/gulp"
+    "dev": "node_modules/.bin/gulp",
+    "deploy": "fly staging"
   },
   "dependencies": {
     "async": "^0.9.0",
@@ -52,6 +53,7 @@
     "watchify": "^3.1.1"
   },
   "devDependencies": {
-    "chai": "^2.2.0"
+    "chai": "^2.2.0",
+    "flightplan": "^0.6.4"
   }
 }

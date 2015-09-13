@@ -15,3 +15,8 @@ deployment:
     branch: master
     heroku:
       appname: mfnewwind
+
+  "staging.aws":
+    branch: master
+    commands:
+      - npm run deploy
