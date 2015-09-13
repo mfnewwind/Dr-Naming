@@ -15,3 +15,9 @@ deployment:
     branch: master
     heroku:
       appname: mfnewwind
+
+  "staging.aws":
+    branch: issues/64
+    commands:
+      - npm install -g flightplan
+      - fly staging
