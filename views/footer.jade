@@ -6,14 +6,14 @@ footer
       img.logo(src='/images/footer_logo_dummy.png')
     a.wrapper.line(href='/')
       span.sitemap トップ
-    a.wrapper.line(href='')
-      span.sitemap 利用規約
+    // a.wrapper.line(href='')
+    //   span.sitemap 利用規約
     //p.wrapper.line
       small &copy; 2015 Mobile Factory All Rights Reserved.
 script.
     function back_top() {
       if (Math.max(document.documentElement.scrollTop, document.body.scrollTop) > 0) {
-        window.scrollBy(0,-30); 
-        scrolldelay = setTimeout('back_top()',10); 
+        window.scrollBy(0,-30);
+        scrolldelay = setTimeout('back_top()',10);
       }
     }
